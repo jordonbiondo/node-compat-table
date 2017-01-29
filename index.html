@@ -20527,20 +20527,20 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
           <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.5.372.40" class="version nightly">8.0.0<sup>Nightly!</sup><sub class="flagged">71% complete</sub><sub class="unflagged">67% complete</sub></th>
-              <th title="v8: 5.4.500.45" class="version v7">7.4.0<sub class="flagged">71% complete</sub><sub class="unflagged">36% complete</sub></th>
-              <th title="v8: 5.4.500.45" class="version v7">7.3.0<sub class="flagged">71% complete</sub><sub class="unflagged">36% complete</sub></th>
-              <th title="v8: 5.4.500.44" class="version v7">7.2.1<sub class="flagged">71% complete</sub><sub class="unflagged">36% complete</sub></th>
-              <th title="v8: 5.1.281.89" class="version v6">6.9.4<sub class="flagged">30% complete</sub><sub class="unflagged">24% complete</sub></th>
-              <th title="v8: 5.1.281.89" class="version v6">6.9.3<sub class="flagged">30% complete</sub><sub class="unflagged">24% complete</sub></th>
-              <th title="v8: 5.1.281.88" class="version v6">6.9.2<sub class="flagged">30% complete</sub><sub class="unflagged">24% complete</sub></th>
-              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 4.5.103.43" class="version v4">4.7.2<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 4.5.103.43" class="version v4">4.7.1<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
-              <th title="v8: 3.28.71.20" class="version v0">0.12.18<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
+              <th title="v8: 5.5.372.40" class="version nightly">8.0.0<sup>Nightly!</sup><sub class="flagged">74% complete</sub><sub class="unflagged">70% complete</sub></th>
+              <th title="v8: 5.4.500.45" class="version v7">7.4.0<sub class="flagged">74% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 5.4.500.45" class="version v7">7.3.0<sub class="flagged">74% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 5.4.500.44" class="version v7">7.2.1<sub class="flagged">74% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 5.1.281.89" class="version v6">6.9.4<sub class="flagged">31% complete</sub><sub class="unflagged">25% complete</sub></th>
+              <th title="v8: 5.1.281.89" class="version v6">6.9.3<sub class="flagged">31% complete</sub><sub class="unflagged">25% complete</sub></th>
+              <th title="v8: 5.1.281.88" class="version v6">6.9.2<sub class="flagged">31% complete</sub><sub class="unflagged">25% complete</sub></th>
+              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.5.103.43" class="version v4">4.7.2<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.5.103.43" class="version v4">4.7.1<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 3.28.71.20" class="version v0">0.12.18<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
               <th title="v8: 3.14.5.11" class="version v0">0.10.48<sub class="flagged">14% complete</sub><sub class="unflagged">14% complete</sub></th>
             </tr>
           </table>
@@ -21256,69 +21256,6 @@ p.then(function(result) {
             <div id="misc" class="hash"></div><a href="#misc">misc</a>
           </h2>
         </caption>
-        <tr>
-          <td colspan="16" class="feature sub">
-            <h3>
-              <div id="class-extends-null" class="hash"></div><a href="#class-extends-null">class extends null</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">proper default constructor
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C extends null {}
-return new C instanceof C;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">proper &quot;this&quot; binding
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var passed = false;
-new class C extends null {
-constructor() {
-passed = (this instanceof C &amp;&amp; !(this instanceof Object));
-return this;
-}
-};
-return passed;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
         <tr>
           <td colspan="16" class="feature sub">
             <h3>
