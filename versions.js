@@ -1,42 +1,34 @@
-const semver = require('semver')
-const https = require('https')
-const error = (e) => { console.log(e); process.exit(1) }
 
-var chunks = []
-https.get('https://nodejs.org/dist/index.json', function (res) {
-  res.on('data', (chunk) => chunks.push(chunk))
-  res.on('close', error)
-  res.on('end', function () {
-    if (res.statusCode !== 200) {
-      return error(new Error(res.statusCode + ' ' + res.statusMessage))
-    }
+const versions = require('fs').readFileSync('./.versions').toString().replace(/v/g, '').trim().split('\n')
+const prev = { flagged: { data: '' }, unflagged: { data: '' } }
 
-    var body = Buffer.concat(chunks).toString()
-    var publishedVersions = JSON.parse(body).map((v) => v.version)
-    filter(publishedVersions)
+function serialize (v, harmony = '') {
+  const data = require(`./results/${v}${harmony}.json`)
+  return {
+    v8: data._v8,
+    data: JSON.stringify(data, (k, v) => /^_/.test(k) ? 0 : v)
+  }
+}
+
+versions.unshift('nightly')
+versions.forEach((v) => {
+  const cur = {
+    unflagged: serialize(v),
+    flagged: serialize(v, '--harmony')
+  }
+
+  if (cur.unflagged.data !== prev.unflagged.data || cur.flagged.data !== prev.flagged.data) {
+    prev.parent = v
+    exports[v] = []
+  }
+  exports[prev.parent].push({
+    version: v,
+    engine: 'v8 ' + cur.unflagged.v8
   })
+  prev.flagged = cur.flagged
+  prev.unflagged = cur.unflagged
 })
-  .on('error', error)
 
-function filter (published) {
-  function max (version) {
-    var v = semver.maxSatisfying(published, version)
-    if (v) return v.substr(1)
-  }
-
-  var desired = []
-  var last = () => desired[desired.length - 1]
-  var add = (v) => v && desired.push(v)
-  for (var i = 16; i >= 5; i--) {
-    add(max(`${i}`))
-    add(max(`>${i}.0.0 <${last()}`))
-    add(max(`>${i}.0.0 <${last()}`))
-  }
-  add(max('4'))
-  add(max(`>4.0.0 <${last()}`))
-  add(max('4.3')) // special case for AWS Lambda
-  add(max('0.12'))
-  add(max('0.10'))
-
-  console.log(desired.join('\n'))
+if (require.main === module) {
+  console.log(JSON.stringify(exports, null, 2))
 }

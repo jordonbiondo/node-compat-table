@@ -21,16 +21,18 @@ body
       h1: a(href="#"+esVersion) Node.js #{esVersion} Support
       table.headings
         tr
-          each nodeVersion in nodeVersions
-            if(nodeVersion === 'nightly')
-              th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/, '')
+          each details, nodeVersion in nodeVersions
+            th.version(class='v' + nodeVersion.split('.')[ 0 ])=harmony[nodeVersion]._version.replace(/-.*/, '')
+              .details
+                small (these versions have identical results)
+                each detail in details
+                  table: tr
+                    td=detail.version
+                    td=detail.engine
+              if(nodeVersion === 'nightly')
                 sup Nightly!
-                sub.flagged=percent('nightly', esVersion) + '% complete'
-                sub.unflagged=percent('nightly', esVersion, true) + '% complete'
-            else
-              th.version(class='v' + nodeVersion.split('.')[ 0 ], title=tip(nodeVersion))=nodeVersion
-                sub.flagged=percent(nodeVersion, esVersion) + '% complete'
-                sub.unflagged=percent(nodeVersion, esVersion, true) + '% complete'
+              sub.flagged=percent(nodeVersion, esVersion) + '% complete'
+              sub.unflagged=percent(nodeVersion, esVersion, true) + '% complete'
 
   mixin article(esVersion)
     article(id=esVersion)
@@ -43,7 +45,7 @@ body
               a(href='#'+category.replace(/\W/g, '-'))=category
           each obj2, subcategory in obj1
             tr
-              td.feature.sub(colspan=nodeVersions.length+1)
+              td.feature.sub(colspan=Object.keys(nodeVersions).length+1)
                 h3
                   .hash(id=subcategory.replace(/\W/g, '-'))
                   a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
@@ -58,7 +60,7 @@ body
                         | function(){
                         .code=obj3.code
                         | }
-                each nodeVersion in nodeVersions
+                each nodeVersion in Object.keys(nodeVersions)
                   if harmony[nodeVersion]
                     - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
                     td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}

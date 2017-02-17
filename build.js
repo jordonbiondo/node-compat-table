@@ -15,11 +15,10 @@ var results = {
   flagged: {}
 }
 
-var nodeVersions = fs.readFileSync('.versions').toString().trim().split('\n')
-nodeVersions.unshift('nightly')
-nodeVersions.forEach((version) => {
-  results.unflagged[version] = tryRequire('./results/' + version + '.json')
-  results.flagged[version] = tryRequire('./results/' + version + '--harmony.json')
+var nodeVersions = require('./versions.js')
+Object.keys(nodeVersions).forEach((version) => {
+  results.unflagged[version] = require('./results/' + version + '.json')
+  results.flagged[version] = require('./results/' + version + '--harmony.json')
 })
 
 function requiresFlag (nodeVersion, esVersion, path) {
@@ -48,9 +47,6 @@ var html = jade.renderFile('index.jade', {
     return result('unflagged', nodeVersion, esVersion, path) + result('flagged', nodeVersion, esVersion, path)
   },
   requiresFlag: requiresFlag,
-  tip: function (version) {
-    return !results.flagged[version] ? '' : `v8: ${results.flagged[version]._v8}`
-  },
   percent: function (nodeVersion, esVersion, unflagged) {
     var datasource = unflagged ? results.unflagged : results.flagged
     var data = $get(datasource, nodeVersion, esVersion)
@@ -76,11 +72,4 @@ function $set (target, path, value) {
   })
 
   obj[last] = value
-}
-function tryRequire (module) {
-  try {
-    return require(module)
-  } catch (e) {
-    console.log("couldn't find:", module)
-  }
 }

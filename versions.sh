@@ -1,27 +1,4 @@
 #!/usr/bin/env bash
 
-ORIGIN=https://hubbed:$GITHUB_TOKEN@github.com/williamkapke/node-compat-table.git
-
-echo 'downloading latest...'
-rm -rf ./.temp
-git clone $ORIGIN .temp
-
-mkdir -p ./.temp/results
-cd ./.temp
-git config user.email "hubbed@kap.co"
-git config user.name "Imma Bot"
-
-node versions.js > .versions
-
-git add .versions
-
-if [[ `git diff --name-only --cached` == '' ]]; then
-  echo 'No changes';
-  exit 1;
-fi
-
-echo
-echo 'Saving versions...'
-git commit -am 'Auto Update Node Versions'
-git push $ORIGIN gh-pages
+curl -s https://nodejs.org/dist/index.tab | awk '{if (/^v[1-9]/ ||/^v0.10.4[8-9]/ || /^v0.12.[1][8-9]/) print $1;}'
 

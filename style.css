@@ -80,10 +80,10 @@ body.scrolled .headings {
   position: fixed;
   top: -2px;
 }
-.nightly {
+.vnightly {
   background-color: #454545;
 }
-.nightly sup {
+.vnightly sup {
   color: gold;
   position: absolute;
   top: -15px;
@@ -160,12 +160,31 @@ article > header > h1 a:hover {
   min-width: 65px;
 }
 .version {
+  cursor: pointer;
   font-size: 16px;
   padding: 3px 0;
   color: white;
   position: relative;
   vertical-align: top;
   line-height: 16px;
+}
+.details {
+  padding: 6px;
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  font-weight: normal;
+  background-color: #454545;
+  color: #aaa;
+  width: 240px;
+  border-radius: 9px;
+}
+.details td {
+  min-width: 80px;
+}
+.version:hover .details {
+  display: block;
 }
 .result {
   line-height: 21px;
