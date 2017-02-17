@@ -52,7 +52,8 @@ body
             each obj3, subsubcategory in obj2
               tr
                 td.feature.subsub
-                  | #{subsubcategory}
+                  .hash(id=subsubcategory.replace(/\W/g, '-'))
+                  a(href='#'+subsubcategory.replace(/\W/g, '-'))=subsubcategory
                   if obj3.code
                     .info
                       | ?
