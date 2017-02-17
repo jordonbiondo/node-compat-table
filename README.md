@@ -1,4 +1,4 @@
-# Node.js ES2015 compatibility tables
+# Node.js ECMAScript compatibility tables
 [node-compat-tables](https://williamkapke.github.io/node-compat-table/) is built on top of
 [Kangax's hard work](https://github.com/kangax/compat-table). The majority of the credit needs to be given to the contributors
 of that project.
@@ -39,4 +39,4 @@ Both scripts push their changes to the Github repo when complete.
 
 
 ## License
-[MIT Copyright (c) 2016 William Kapke](https://github.com/williamkapke/node-compat-table/blob/gh-pages/LICENSE)
+[MIT Copyright (c) William Kapke](https://github.com/williamkapke/node-compat-table/blob/gh-pages/LICENSE)
