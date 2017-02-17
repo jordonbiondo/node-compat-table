@@ -29,11 +29,9 @@ $ node build.js
 column will be empty (all white cells- no text).
 
 ## How tests are run
-2 schedulers run on Heroku:
-One runs `bash versions.sh` (every 10 minutes) to generate the latest versions and saves them to `.versions`. The other
-runs `bash test.sh` (once a day), which saves the results to the `/results` directory, rebuilds the webpage.
+A scheduled task runs on Heroku runs `bash test.sh` once a day, which saves the results to the `/results` directory, rebuilds the webpage.
 
-Both scripts push their changes to the Github repo when complete.
+It then push the changes to the GitHub repo when complete.
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
