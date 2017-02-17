@@ -23,11 +23,14 @@ node testers.js > testers.json
 
 echo
 echo 'running the tests on each version of node...'
-while read v; do
-  n use $v test.js
-  n use $v --es_staging test.js
-  n use $v --harmony test.js
-done < .versions
+
+NODE_VERSIONS=$(curl -s https://nodejs.org/dist/index.tab | awk '{if (/^v[1-9]/ ||/^v0.10.4[8-9]/ || /^v0.12.[1][8-9]/) print $1;}')
+for v in $NODE_VERSIONS; do
+  n $v
+  node test.js
+  node --es_staging test.js
+  node --harmony test.js
+done
 
 
 LATEST=$(curl -sL https://nodejs.org/download/nightly/index.tab |   awk '{ if (!f && NR > 1) { print $1; f = 1 } }')
