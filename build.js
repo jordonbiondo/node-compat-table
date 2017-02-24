@@ -15,10 +15,11 @@ var results = {
   flagged: {}
 }
 
-var nodeVersions = require('./versions.js')
+const engine = 'v8'
+var nodeVersions = require('./versions.js')(engine)
 Object.keys(nodeVersions).forEach((version) => {
-  results.unflagged[version] = require('./results/' + version + '.json')
-  results.flagged[version] = require('./results/' + version + '--harmony.json')
+  results.unflagged[version] = require(`./results/${engine}/${version}.json`)
+  results.flagged[version] = require(`./results/${engine}/${version}--harmony.json`)
 })
 
 function requiresFlag (nodeVersion, esVersion, path) {

@@ -10,14 +10,14 @@ of Node.js. So, I created [node-compat-table](https://williamkapke.github.io/nod
 
 It works by [running a script](https://github.com/williamkapke/node-compat-table/blob/gh-pages/test.sh) that imports the
 latest set of <s>ES6</s> ES2015 tests from the [compat-table](https://github.com/kangax/compat-table) project and running
-them against [several versions](https://github.com/williamkapke/node-compat-table/blob/gh-pages/.versions) of node PLUS
+them against [several versions](https://github.com/williamkapke/node-compat-table/blob/gh-pages/v8.versions) of node PLUS
 [the nightly build](https://nodejs.org/download/nightly/). The results are committed/published here.
 
 ## Making change to the webpage
 The webpage is hosted via GitHub.
 
 The `build.js` file:
-1) aggregates the data from the `/results` folder for the versions listed in `.versions`
+1) aggregates the data from the `/results` folder for the versions listed in `v8.versions`
 2) uses `index.jade` to generate `index.html`
 
 So, change `index.jade` then run:
@@ -25,7 +25,7 @@ So, change `index.jade` then run:
 $ node build.js
 ```
 
-** Note: If a version is listed in `.versions` that doesn't have results generated in the `/results` directory, the
+** Note: If a version is listed in `v8.versions` that doesn't have results generated in the `/results` directory, the
 column will be empty (all white cells- no text).
 
 ## How tests are run

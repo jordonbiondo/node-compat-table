@@ -24,13 +24,13 @@ node testers.js > testers.json
 echo
 echo 'running the tests on each version of node...'
 
-bash versions.sh > .versions
+bash versions.sh > v8.versions
 while read v; do
   n $v
   node test.js
   node --es_staging test.js
   node --harmony test.js
-done < .versions
+done < v8.versions
 
 
 LATEST=$(curl -sL https://nodejs.org/download/nightly/index.tab |   awk '{ if (!f && NR > 1) { print $1; f = 1 } }')
@@ -40,8 +40,8 @@ node --es_staging test.js
 node --harmony test.js
 
 n use 6.5.0
-git add ./results/*.json
-git add .versions
+git add ./results/**/*.json
+git add v8.versions
 
 if [[ `git status -s` == '' ]]; then
   echo 'No changes';

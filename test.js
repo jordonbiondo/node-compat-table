@@ -2,6 +2,7 @@ const testers = require('./testers.json')
 const fs = require('fs')
 const path = require('path')
 var version = process.versions.node
+var engine = process.jsEngine || 'v8'
 
 var esStaging = /--es_staging/.test(process.execArgv) ? '--es_staging' : ''
 if (esStaging) version += '--es_staging'
@@ -38,7 +39,7 @@ global.__createIterableObject = function (arr, methods) {
 
 var output = {
   _version: version,
-  _v8: process.versions.v8
+  ['_'+engine]: process.versions[engine]
 }
 
 var versions = Object.keys(testers)
@@ -129,5 +130,5 @@ function write () {
     if (esStaging) version += '--es_staging'
     if (harmony) version += '--harmony'
   }
-  fs.writeFileSync(path.resolve(__dirname, 'results', version + '.json'), json)
+  fs.writeFileSync(path.resolve(__dirname, 'results/'+engine, version + '.json'), json)
 }
