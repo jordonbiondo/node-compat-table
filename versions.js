@@ -1,22 +1,27 @@
 
 module.exports = function(engine) {
   const out = {}
-  const versions = require('fs').readFileSync('./v8.versions').toString().replace(/v/g, '').trim().split('\n')
+  const versions = require('fs').readFileSync(`./${engine}.versions`).toString().replace(/v/g, '').trim().split('\n')
   const prev = { flagged: { data: '' }, unflagged: { data: '' } }
 
   function serialize (v, harmony = '') {
-    const data = require(`./results/${engine}/${v}${harmony}.json`)
-    return {
-      engine: data._engine,
-      data: JSON.stringify(data, (k, v) => /^_/.test(k) ? 0 : v)
+    try {
+      const data = require(`./results/${engine}/${v}${harmony}.json`)
+      return {
+        engine: data._engine,
+        data: JSON.stringify(data, (k, v) => /^_/.test(k) ? 0 : v)
+      }
     }
+    catch(e) {}
   }
 
   versions.unshift('nightly')
   versions.forEach((v) => {
+    if(!v) return; // ignore empty lines
+    const unflagged = serialize(v)
     const cur = {
-      unflagged: serialize(v),
-      flagged: serialize(v, '--harmony')
+      unflagged: unflagged,
+      flagged: serialize(v, '--harmony') || unflagged
     }
 
     if (cur.unflagged.data !== prev.unflagged.data || cur.flagged.data !== prev.flagged.data) {
