@@ -54,7 +54,7 @@ fi
 
 echo
 echo 'building webpage...'
-node build.js
+node build.js > index.html
 
 echo
 echo 'saving the results...'

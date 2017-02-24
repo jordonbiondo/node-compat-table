@@ -21,16 +21,16 @@ body
       h1: a(href="#"+esVersion) Node.js #{esVersion} Support
       table.headings
         tr
-          each details, nodeVersion in nodeVersions
-            th.version(class='v' + nodeVersion.split('.')[ 0 ])=harmony[nodeVersion]._version.replace(/-.*/, '')
+          each details, nodeVersion in headers
+            th.version(class='v' + nodeVersion.split('.')[0])=details.version
               .details
                 small (these versions have identical results)
-                each detail in details
+                each detail in details.includes
                   table: tr
                     td=detail.version
                     td=detail.engine
-              if(nodeVersion === 'nightly')
-                sup Nightly!
+              if(details.super)
+                sup=details.super
               sub.flagged=percent(nodeVersion, esVersion) + '% complete'
               sub.unflagged=percent(nodeVersion, esVersion, true) + '% complete'
 
@@ -45,7 +45,7 @@ body
               a(href='#'+category.replace(/\W/g, '-'))=category
           each obj2, subcategory in obj1
             tr
-              td.feature.sub(colspan=Object.keys(nodeVersions).length+1)
+              td.feature.sub(colspan=Object.keys(headers).length+1)
                 h3
                   .hash(id=subcategory.replace(/\W/g, '-'))
                   a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
@@ -61,12 +61,9 @@ body
                         | function(){
                         .code=obj3.code
                         | }
-                each nodeVersion in Object.keys(nodeVersions)
-                  if harmony[nodeVersion]
-                    - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
-                    td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}
-                  else
-                    td.result(title='No results yet')
+                each nodeVersion in Object.keys(headers)
+                  - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
+                  td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}
 
 
   +article('ES2015')
