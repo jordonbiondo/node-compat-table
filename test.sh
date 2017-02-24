@@ -39,7 +39,11 @@ node test.js
 node --es_staging test.js
 node --harmony test.js
 
-n use 6.5.0
+LATEST=$(curl -sL https://nodejs.org/download/chakracore-nightly/index.tab |   awk '{ if (!f && NR > 1) { print $1; f = 1 } }')
+PROJECT_NAME="node" PROJECT_URL="https://nodejs.org/download/chakracore-nightly/" n project $LATEST
+node test.js
+
+n use 6.10.0
 git add ./results/**/*.json
 git add v8.versions
 

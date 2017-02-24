@@ -39,7 +39,7 @@ global.__createIterableObject = function (arr, methods) {
 
 var output = {
   _version: version,
-  ['_'+engine]: process.versions[engine]
+  _engine: engine + ' ' + process.versions[engine]
 }
 
 var versions = Object.keys(testers)
@@ -130,5 +130,5 @@ function write () {
     if (esStaging) version += '--es_staging'
     if (harmony) version += '--harmony'
   }
-  fs.writeFileSync(path.resolve(__dirname, 'results/'+engine, version + '.json'), json)
+  fs.writeFileSync(path.resolve(__dirname, 'results/' + engine, version + '.json'), json)
 }
