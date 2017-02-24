@@ -1,6 +1,6 @@
 {
-  "_version": "8.0.0-nightly2017021305e0f044bc",
-  "_chakracore": "2.0.0.0",
+  "_version": "8.0.0-nightly2017022305e0f044bc",
+  "_engine": "chakracore 2.0.0.0",
   "ES2017": {
     "_successful": 57,
     "_count": 64,
