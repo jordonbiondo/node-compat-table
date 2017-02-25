@@ -21,6 +21,14 @@ function $set (target, path, value) {
 
   obj[last] = value
 }
+const replacements = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#x27;',
+  '/': '&#x2F;'
+}
 
 module.exports = {
   $get,
@@ -38,5 +46,6 @@ module.exports = {
       )
     })
     return testers
-  }
+  },
+  $escape: (str) => str.replace(/[&<>"'\/]/g, (x) => replacements[x])
 }

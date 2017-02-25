@@ -23,7 +23,7 @@ body > header > * {
   position: absolute;
 }
 #credits {
-  left: 774px;
+  right: 20px;
   top: 2px;
   font-size: 12px;
 }
@@ -34,7 +34,7 @@ body > header > * {
 }
 label[for=flagged] {
   cursor: pointer;
-  left: 600px;
+  right: 200px;
   font-size: 12px;
   top: 2px;
 }
@@ -80,10 +80,7 @@ body.scrolled .headings {
   position: fixed;
   top: -2px;
 }
-.vnightly {
-  background-color: #454545;
-}
-.vnightly sup {
+.version sup {
   color: gold;
   position: absolute;
   top: -15px;
@@ -95,7 +92,7 @@ body.scrolled .headings {
   position: fixed;
   z-index: 101;
   top: 0;
-  left: 580px;
+  right: 340px;
 }
 #flagged:checked ~ article .flagged,
 #flagged:checked ~ header .flagged { display:block; }

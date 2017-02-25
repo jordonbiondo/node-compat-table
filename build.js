@@ -1,5 +1,6 @@
 var jade = require('jade')
 var utils = require('./utils.js');
+var $escape = utils.$escape
 var $get = utils.$get
 var testers = utils.objectifiedTesters();
 
@@ -29,18 +30,19 @@ function requiresFlag (nodeVersion, esVersion, path) {
 }
 function result (type, nodeVersion, esVersion, path) {
   var result = $get(results, type, nodeVersion)
-  if (!result) return ''
+  if (result === undefined) return ''
   result = $get(result, esVersion, path)
 
   var flaggd = type === 'flagged'
   var flagRequired = flaggd && requiresFlag(nodeVersion, esVersion, path)
   var title = result === true ? (flagRequired ? 'Yes, but requires --harmony flag' : 'Test passed') : typeof result === 'string' ? result : 'Test failed'
   result = result === true ? 'Yes' : typeof result === 'string' ? 'Error' : 'No'
-  return `<div class="${result} ${type} ${flagRequired ? 'required' : ''}" title="${title}">${result}</div>`
+  return `<div class="${result} ${type} ${flagRequired ? 'required' : ''}" title="${$escape(title)}">${result === 'Yes' && flagRequired ? 'Flag' : result}</div>`
 }
 
 var html = jade.renderFile('index.jade', {
   pretty: true,
+  flaggable: true,
   headers: headers,
   testers: testers,
   results: function (nodeVersion, esVersion, path) {
@@ -54,4 +56,4 @@ var html = jade.renderFile('index.jade', {
   }
 })
 
-process.stdout.write(html)
+require('fs').writeFileSync('./index.html', html)

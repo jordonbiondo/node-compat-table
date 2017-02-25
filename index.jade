@@ -14,7 +14,8 @@ html
 
     link(rel="stylesheet", href="style.css")
 body
-  input#flagged(type='checkbox', style='position:fixed', checked='checked')
+  if (flaggable)
+    input#flagged(type='checkbox', style='position:fixed', checked='checked')
 
   mixin header(esVersion)
     header
@@ -22,7 +23,7 @@ body
       table.headings
         tr
           each details, nodeVersion in headers
-            th.version(class='v' + nodeVersion.split('.')[0])=details.version
+            th.version(class='v' + details.version.split('.')[0])=details.version
               .details
                 small (these versions have identical results)
                 each detail in details.includes
@@ -31,29 +32,33 @@ body
                     td=detail.engine
               if(details.super)
                 sup=details.super
-              sub.flagged=percent(nodeVersion, esVersion) + '% complete'
+              if (flaggable)
+                sub.flagged=percent(nodeVersion, esVersion) + '% complete'
               sub.unflagged=percent(nodeVersion, esVersion, true) + '% complete'
 
   mixin article(esVersion)
     article(id=esVersion)
       +header(esVersion)
       each obj1, category in testers[esVersion]
+        - category2 = esVersion+'-'+category.replace(/\W/g, '-')
         table.results
           caption
             h2.category
-              .hash(id=category.replace(/\W/g, '-'))
-              a(href='#'+category.replace(/\W/g, '-'))=category
+              .hash(id=category2)
+              a(href='#'+category2)=category
           each obj2, subcategory in obj1
+            - subcategory2 = [category2,subcategory.replace(/\W/g, '-')].join('-')
             tr
               td.feature.sub(colspan=Object.keys(headers).length+1)
                 h3
-                  .hash(id=subcategory.replace(/\W/g, '-'))
-                  a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
+                  .hash(id=subcategory2)
+                  a(href='#'+subcategory2)=subcategory
             each obj3, subsubcategory in obj2
+              - subsubcategory2 = [subcategory2,subsubcategory.replace(/\W/g, '-')].join('-')
               tr
                 td.feature.subsub
-                  .hash(id=subsubcategory.replace(/\W/g, '-'))
-                  a(href='#'+subsubcategory.replace(/\W/g, '-'))=subsubcategory
+                  .hash(id=subsubcategory2)
+                  a(href='#'+subsubcategory2)=subsubcategory
                   if obj3.code
                     .info
                       | ?
@@ -76,9 +81,10 @@ body
     #subheading
       a(href='https://github.com/kangax/compat-table', target="_blank") kangax's compat-table
       | &nbsp;applied only to Node.js
-    label(for='flagged', style='cursor:pointer') requires&nbsp;
-      a(href='https://nodejs.org/en/docs/es6/', target="_blank") harmony
-      | &nbsp;flag ⚐
+    if (flaggable)
+      label(for='flagged', style='cursor:pointer') requires&nbsp;
+        a(href='https://nodejs.org/en/docs/es6/', target="_blank") harmony
+        | &nbsp;flag ⚐
     #credits
       | Created by&nbsp;
       a(href='https://github.com/williamkapke', target="_blank") William Kapke
