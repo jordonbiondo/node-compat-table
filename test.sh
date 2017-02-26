@@ -39,6 +39,12 @@ node test.js
 node --es_staging test.js
 node --harmony test.js
 
+# test latest from the v8 team
+bash bash download-chromium-latest.sh
+if [ -d "./chromium-latest" ]; then
+  chromium-latest/bin/node test.js
+fi
+
 LATEST=$(curl -sL https://nodejs.org/download/chakracore-nightly/index.tab |   awk '{ if (!f && NR > 1) { print $1; f = 1 } }')
 PROJECT_NAME="node" PROJECT_URL="https://nodejs.org/download/chakracore-nightly/" n project $LATEST
 node test.js

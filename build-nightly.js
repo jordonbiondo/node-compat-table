@@ -5,7 +5,7 @@ var $get = utils.$get
 var testers = utils.objectifiedTesters();
 
 var results = {
-  v8: require(`./results/v8/nightly.json`),
+  v8: require(`./results/v8/bleeding.json`),
   chakracore: require(`./results/chakracore/nightly.json`)
 }
 
