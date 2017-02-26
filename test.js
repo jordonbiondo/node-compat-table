@@ -125,10 +125,15 @@ function strict (script) {
 
 function write () {
   var json = JSON.stringify(output, null, 2)
+  if (/v8-build/.test(version)) {
+    version = 'bleeding'
+  }
   if (/nightly/.test(version)) {
     version = 'nightly'
     if (esStaging) version += '--es_staging'
     if (harmony) version += '--harmony'
   }
-  fs.writeFileSync(path.resolve(__dirname, 'results/' + engine, version + '.json'), json)
+  var destination = path.resolve(__dirname, 'results/' + engine, version + '.json')
+  console.log('Saving', destination)
+  fs.writeFileSync(destination, json)
 }
