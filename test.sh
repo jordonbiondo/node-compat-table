@@ -40,7 +40,7 @@ node --es_staging test.js
 node --harmony test.js
 
 # test latest from the v8 team
-bash bash download-chromium-latest.sh
+bash download-chromium-latest.sh
 if [ -d "./chromium-latest" ]; then
   chromium-latest/bin/node test.js
 fi
