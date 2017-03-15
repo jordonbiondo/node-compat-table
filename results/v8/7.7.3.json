@@ -1,10 +1,10 @@
 {
-  "_version": "8.0.0-nightly20170314879d6663ea",
-  "_engine": "v8 5.6.326.56",
+  "_version": "7.7.3",
+  "_engine": "v8 5.5.372.41",
   "ES2017": {
-    "_successful": 34,
+    "_successful": 33,
     "_count": 64,
-    "_percent": 0.53125,
+    "_percent": 0.515625,
     "features›Object static methods›Object.values": true,
     "features›Object static methods›Object.entries": true,
     "features›Object static methods›Object.getOwnPropertyDescriptors": true,
@@ -47,7 +47,7 @@
     "features›shared memory and atomics›Atomics.xor": "Atomics is not defined",
     "misc›Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets": true,
     "misc›RegExp \"u\" flag, case folding": false,
-    "misc›arguments.caller removed": true,
+    "misc›arguments.caller removed": false,
     "annex b›Object.prototype getter/setter methods›__defineGetter__": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__, symbols": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__, ToObject(this)": false,
