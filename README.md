@@ -9,7 +9,7 @@ flavors out there. What I **do** need are deeper insights in the variations acro
 of Node.js. So, I created [node-compat-table](https://williamkapke.github.io/node-compat-table/).
 
 It works by [running a script](https://github.com/williamkapke/node-compat-table/blob/gh-pages/test.sh) that imports the
-latest set of <s>ES6</s> ES2015 tests from the [compat-table](https://github.com/kangax/compat-table) project and running
+latest set of <s>ES6</s> ES2015, ES2016 and ES2017 tests from the [compat-table](https://github.com/kangax/compat-table) project and running
 them against [several versions](https://github.com/williamkapke/node-compat-table/blob/gh-pages/v8.versions) of node PLUS
 [the nightly build](https://nodejs.org/download/nightly/). The results are committed/published here.
 
