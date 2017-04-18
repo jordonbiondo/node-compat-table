@@ -1,14 +1,17 @@
 
+const data = { master: 'client.v8.fyi', builder: 'V8 - node.js integration', limit: 10 }
+const headers = { Accept: 'application/prpc; encoding=binary', 'Content-Type': 'application/json' }
+const fail = () => { throw new Error('Valid build not found') }
+
 // find the url to the latest successful build
 
-require('get-then')('https://build.chromium.org/p/client.v8.fyi/json/builders/V8%20-%20node.js%20integration/builds/_all/')
+require('get-then')('https://luci-milo.appspot.com/prpc/milo.Buildbot/GetBuildbotBuildsJSON', headers, data)
+.then(
+  // dissect the icky binary format
+  (data) => data.toString('utf8', 8).split(/\n[^{]+/)
+)
+.then((builds) => builds[builds.findIndex((build) => !build.includes('Failure'))] || fail())
 .then(JSON.parse)
-.then((data) => {
-  for (let n of Object.keys(data).reverse()) {
-    if(data[n].text.includes('successful'))
-    return data[n]
-  }
-})
 .then((latest) =>
   latest && latest.steps.find((step) => step.name === "Archive link")
 )
