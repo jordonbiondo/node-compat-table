@@ -1,6 +1,6 @@
 {
-  "_version": "8.0.0-nightly2017050673d9c0f903",
-  "_engine": "v8 5.7.492.69",
+  "_version": "8.0.0-nightly201705073fd890a06e",
+  "_engine": "v8 5.8.283.38",
   "ESNEXT": {
     "_successful": 7,
     "_count": 128,
@@ -138,20 +138,20 @@
     "_successful": 0,
     "_count": 1,
     "_percent": 0,
-    "features›template literal revision": "Invalid hexadecimal escape sequence"
+    "features›template literal revision": "Octal escape sequences are not allowed in strict mode."
   },
   "ES2017": {
-    "_successful": 40,
+    "_successful": 42,
     "_count": 64,
-    "_percent": 0.625,
+    "_percent": 0.65625,
     "features›Object static methods›Object.values": true,
     "features›Object static methods›Object.entries": true,
     "features›Object static methods›Object.getOwnPropertyDescriptors": true,
     "features›Object static methods›Object.getOwnPropertyDescriptors doesn't provide undefined descriptors": true,
     "features›String padding›String.prototype.padStart": true,
     "features›String padding›String.prototype.padEnd": true,
-    "features›trailing commas in function syntax›in parameter lists": "Unexpected token )",
-    "features›trailing commas in function syntax›in argument lists": "Unexpected token )",
+    "features›trailing commas in function syntax›in parameter lists": true,
+    "features›trailing commas in function syntax›in argument lists": true,
     "features›async functions›return": true,
     "features›async functions›throw": true,
     "features›async functions›no line break between async and function": true,

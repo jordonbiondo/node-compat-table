@@ -1,10 +1,10 @@
 {
-  "_version": "8.0.0-nightly2017050673d9c0f903--es_staging",
-  "_engine": "v8 5.7.492.69",
+  "_version": "8.0.0-nightly201705073fd890a06e--es_staging",
+  "_engine": "v8 5.8.283.38",
   "ESNEXT": {
-    "_successful": 8,
+    "_successful": 10,
     "_count": 128,
-    "_percent": 0.0625,
+    "_percent": 0.078125,
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›basic support": false,
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›Float32x4": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›Int32x4": "SIMD is not defined",
@@ -62,8 +62,8 @@
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%booleanType%.xor": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%type%.fromTIMDBits": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%type%.fromTIMD": "SIMD is not defined",
-    "candidate (stage 3)›object rest properties": "Unexpected token ...",
-    "candidate (stage 3)›object spread properties": "Unexpected token ...",
+    "candidate (stage 3)›object rest properties": true,
+    "candidate (stage 3)›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
     "candidate (stage 3)›global›\"global\" global property has correct property descriptor": false,
     "candidate (stage 3)›Async iteration›async generators": "Unexpected token *",
@@ -135,10 +135,10 @@
     "pre-strawman›Metadata reflection API›Reflect.metadata": false
   },
   "ES2018": {
-    "_successful": 0,
+    "_successful": 1,
     "_count": 1,
-    "_percent": 0,
-    "features›template literal revision": "Invalid hexadecimal escape sequence"
+    "_percent": 1,
+    "features›template literal revision": true
   },
   "ES2017": {
     "_successful": 42,
@@ -228,11 +228,11 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 675,
+    "_successful": 673,
     "_count": 677,
-    "_percent": 0.9970457902511078,
-    "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
-    "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
+    "_percent": 0.9940915805022157,
+    "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
+    "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": true,
     "syntax›default function parameters›explicit undefined defers to the default": true,
     "syntax›default function parameters›defaults can refer to previous params": true,
