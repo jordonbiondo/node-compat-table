@@ -18966,7 +18966,9 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');</div>}
                 <div class="code">return 'hello'.padStart(10) === '     hello'
 &amp;&amp; 'hello'.padStart(10, '1234') === '12341hello'
 &amp;&amp; 'hello'.padStart() === 'hello'
-&amp;&amp; 'hello'.padStart(6, '123') === '1hello';</div>}
+&amp;&amp; 'hello'.padStart(6, '123') === '1hello'
+&amp;&amp; 'hello'.padStart(3) === 'hello'
+&amp;&amp; 'hello'.padStart(3, '123') === 'hello';</div>}
               </div>
             </div>
           </td>
@@ -18988,7 +18990,9 @@ return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');</div>}
                 <div class="code">return 'hello'.padEnd(10) === 'hello     '
 &amp;&amp; 'hello'.padEnd(10, '1234') === 'hello12341'
 &amp;&amp; 'hello'.padEnd() === 'hello'
-&amp;&amp; 'hello'.padEnd(6, '123') === 'hello1';</div>}
+&amp;&amp; 'hello'.padEnd(6, '123') === 'hello1'
+&amp;&amp; 'hello'.padEnd(3) === 'hello'
+&amp;&amp; 'hello'.padEnd(3, '123') === 'hello';</div>}
               </div>
             </div>
           </td>
