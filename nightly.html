@@ -10190,12 +10190,12 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
 var get = [];
 var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
 RegExp.prototype[Symbol.search].call(p);
-return get + '' === &quot;lastIndex,exec&quot;;</div>}
+return get + '' === &quot;lastIndex,exec,lastIndex&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">

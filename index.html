@@ -14823,14 +14823,14 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
 var get = [];
 var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
 RegExp.prototype[Symbol.search].call(p);
-return get + '' === &quot;lastIndex,exec&quot;;</div>}
+return get + '' === &quot;lastIndex,exec,lastIndex&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>

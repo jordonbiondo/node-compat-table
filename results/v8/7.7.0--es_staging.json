@@ -228,9 +228,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 673,
+    "_successful": 674,
     "_count": 677,
-    "_percent": 0.9940915805022157,
+    "_percent": 0.9955686853766618,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
@@ -810,7 +810,7 @@
     "misc›Proxy, internal 'get' calls›RegExp.prototype.toString": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.match]": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.replace]": true,
-    "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.search]": false,
+    "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.search]": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.split]": true,
     "misc›Proxy, internal 'get' calls›Array.from": true,
     "misc›Proxy, internal 'get' calls›Array.prototype.concat": true,
