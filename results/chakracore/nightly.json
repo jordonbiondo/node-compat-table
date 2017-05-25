@@ -1,6 +1,6 @@
 {
-  "_version": "8.0.0-nightly20170524eb30926dc6",
-  "_engine": "chakracore 2.0.1.0",
+  "_version": "8.0.0-nightly2017052504f48ad9a4",
+  "_engine": "chakracore 1.5.1.0",
   "ESNEXT": {
     "_successful": 6,
     "_count": 128,
