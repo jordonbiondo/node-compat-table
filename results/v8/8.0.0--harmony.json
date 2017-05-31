@@ -1,10 +1,10 @@
 {
-  "_version": "8.0.0-nightly20170530effeff1843",
+  "_version": "8.0.0--harmony",
   "_engine": "v8 5.8.283.41",
   "ESNEXT": {
-    "_successful": 7,
+    "_successful": 10,
     "_count": 128,
-    "_percent": 0.0546875,
+    "_percent": 0.078125,
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›basic support": false,
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›Float32x4": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›Int32x4": "SIMD is not defined",
@@ -62,14 +62,14 @@
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%type%.xor": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%type%.fromTIMDBits": "SIMD is not defined",
     "candidate (stage 3)›SIMD (Single Instruction, Multiple Data)›SIMD.%type%.fromTIMD": "SIMD is not defined",
-    "candidate (stage 3)›object rest properties": "Unexpected token ...",
-    "candidate (stage 3)›object spread properties": "Unexpected token ...",
+    "candidate (stage 3)›object rest properties": true,
+    "candidate (stage 3)›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
     "candidate (stage 3)›global›\"global\" global property has correct property descriptor": false,
     "candidate (stage 3)›Async iteration›async generators": "Unexpected token *",
     "candidate (stage 3)›Async iteration›for-await-of loops": "Unexpected reserved word",
     "candidate (stage 3)›RegExp named capture groups": "Invalid regular expression: /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/: Invalid group",
-    "candidate (stage 3)›RegExp lookbehind": "Invalid regular expression: /(?<=a)b/: Invalid group",
+    "candidate (stage 3)›RegExp lookbehind": true,
     "candidate (stage 3)›RegExp Unicode Property Escapes": "Invalid regular expression: /\\p{Script=Greek}/: Invalid escape",
     "candidate (stage 3)›Function.prototype.toString›functions created with the Function constructor": false,
     "candidate (stage 3)›Function.prototype.toString›arrows": true,
@@ -135,10 +135,10 @@
     "pre-strawman›Metadata reflection API›Reflect.metadata": false
   },
   "ES2018": {
-    "_successful": 0,
+    "_successful": 1,
     "_count": 1,
-    "_percent": 0,
-    "features›template literal revision": "Octal escape sequences are not allowed in strict mode."
+    "_percent": 1,
+    "features›template literal revision": true
   },
   "ES2017": {
     "_successful": 42,
