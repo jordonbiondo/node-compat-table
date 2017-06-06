@@ -24,7 +24,7 @@ module.exports = function(engine) {
       flagged: serialize(v, '--harmony') || unflagged
     }
 
-    if (cur.unflagged.data !== prev.unflagged.data || cur.flagged.data !== prev.flagged.data) {
+    if (cur.unflagged.data !== prev.unflagged.data || cur.flagged.data !== prev.flagged.data || prev.parent === 'nightly') {
       prev.parent = v
       out[v] = []
     }
