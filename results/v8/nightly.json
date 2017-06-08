@@ -1,6 +1,6 @@
 {
-  "_version": "9.0.0-nightly20170606b830c976b5",
-  "_engine": "v8 5.8.283.41",
+  "_version": "9.0.0-nightly20170607eef94a8bf8",
+  "_engine": "v8 5.9.211.32",
   "ESNEXT": {
     "_successful": 7,
     "_count": 128,
@@ -141,9 +141,9 @@
     "features›template literal revision": "Octal escape sequences are not allowed in strict mode."
   },
   "ES2017": {
-    "_successful": 42,
+    "_successful": 43,
     "_count": 64,
-    "_percent": 0.65625,
+    "_percent": 0.671875,
     "features›Object static methods›Object.values": true,
     "features›Object static methods›Object.entries": true,
     "features›Object static methods›Object.getOwnPropertyDescriptors": true,
@@ -185,7 +185,7 @@
     "features›shared memory and atomics›Atomics.sub": "Atomics is not defined",
     "features›shared memory and atomics›Atomics.xor": "Atomics is not defined",
     "misc›Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets": true,
-    "misc›RegExp \"u\" flag, case folding": false,
+    "misc›RegExp \"u\" flag, case folding": true,
     "misc›arguments.caller removed": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__, symbols": true,
