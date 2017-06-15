@@ -14266,13 +14266,13 @@ return typeof SIMD !== 'undefined';</div>}
         <tr>
           <td colspan="3" class="feature sub">
             <h3>
-              <div id="ESNEXT-candidate--stage-3--" class="hash"></div><a href="#ESNEXT-candidate--stage-3--"></a>
+              <div id="ESNEXT-candidate--stage-3--object-rest-spread-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties">object rest/spread properties</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3---object-rest-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3---object-rest-properties">object rest properties</a>
+            <div id="ESNEXT-candidate--stage-3--object-rest-spread-properties-object-rest-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties-object-rest-properties">object rest properties</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var {a, ...rest} = {a: 1, b: 2, c: 3};
@@ -14285,7 +14285,7 @@ return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3---object-spread-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3---object-spread-properties">object spread properties</a>
+            <div id="ESNEXT-candidate--stage-3--object-rest-spread-properties-object-spread-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties-object-spread-properties">object spread properties</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var spread = {b: 2, c: 3};
@@ -14296,51 +14296,6 @@ return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;</div>}
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
           <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3---RegExp-named-capture-groups" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-named-capture-groups">RegExp named capture groups</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec('2016-03-11');
-return result.groups.year === '2016'
-  &amp;&amp; result.groups.month === '03'
-  &amp;&amp; result.groups.day === '11'
-  &amp;&amp; result.groups[0] === '2016-03-11'
-  &amp;&amp; result.groups[1] === '2016'
-  &amp;&amp; result.groups[2] === '03'
-  &amp;&amp; result.groups[3] === '11';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div></td>
-          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3---RegExp-lookbehind" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-lookbehind">RegExp lookbehind</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return /(?&lt;=a)b/.test('ab') &amp;&amp; /(?&lt;!a)b/.test('cb') &amp;&amp;
-       !/(?&lt;=a)b/.test('b');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;(?&lt;=a)b&#x2F;: Invalid group">Error</div></td>
-          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes">RegExp Unicode Property Escapes</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const regexGreekSymbol = /\p{Script=Greek}/u;
-return regexGreekSymbol.test('π');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;\p{Script=Greek}&#x2F;: Invalid escape">Error</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td colspan="3" class="feature sub">
@@ -14385,13 +14340,13 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
         <tr>
           <td colspan="3" class="feature sub">
             <h3>
-              <div id="ESNEXT-candidate--stage-3--Async-iteration" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Async-iteration">Async iteration</a>
+              <div id="ESNEXT-candidate--stage-3--Asynchronous-Iterators" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Asynchronous-Iterators">Asynchronous Iterators</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Async-iteration-async-generators" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Async-iteration-async-generators">async generators</a>
+            <div id="ESNEXT-candidate--stage-3--Asynchronous-Iterators-async-generators" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Asynchronous-Iterators-async-generators">async generators</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">async function*generator(){
@@ -14410,7 +14365,7 @@ iterator.next().then(function(step){
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Async-iteration-for-await-of-loops" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Async-iteration-for-await-of-loops">for-await-of loops</a>
+            <div id="ESNEXT-candidate--stage-3--Asynchronous-Iterators-for-await-of-loops" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Asynchronous-Iterators-for-await-of-loops">for-await-of loops</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var asyncIterable = {};
@@ -14440,13 +14395,65 @@ asyncIterable[Symbol.asyncIterator] = function(){
         <tr>
           <td colspan="3" class="feature sub">
             <h3>
-              <div id="ESNEXT-candidate--stage-3--Function-prototype-toString" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString">Function.prototype.toString</a>
+              <div id="ESNEXT-candidate--stage-3--" class="hash"></div><a href="#ESNEXT-candidate--stage-3--"></a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-functions-created-with-the-Function-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-functions-created-with-the-Function-constructor">functions created with the Function constructor</a>
+            <div id="ESNEXT-candidate--stage-3---RegExp-named-capture-groups" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-named-capture-groups">RegExp named capture groups</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec('2016-03-11');
+return result.groups.year === '2016'
+  &amp;&amp; result.groups.month === '03'
+  &amp;&amp; result.groups.day === '11'
+  &amp;&amp; result.groups[0] === '2016-03-11'
+  &amp;&amp; result.groups[1] === '2016'
+  &amp;&amp; result.groups[2] === '03'
+  &amp;&amp; result.groups[3] === '11';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div></td>
+          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3---RegExp-Lookbehind-Assertions" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-Lookbehind-Assertions">RegExp Lookbehind Assertions</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return /(?&lt;=a)b/.test('ab') &amp;&amp; /(?&lt;!a)b/.test('cb') &amp;&amp;
+       !/(?&lt;=a)b/.test('b');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;(?&lt;=a)b&#x2F;: Invalid group">Error</div></td>
+          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes" class="hash"></div><a href="#ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes">RegExp Unicode Property Escapes</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const regexGreekSymbol = /\p{Script=Greek}/u;
+return regexGreekSymbol.test('π');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;\p{Script=Greek}&#x2F;: Invalid escape">Error</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision">Function.prototype.toString revision</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor">functions created with the Function constructor</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
@@ -14460,7 +14467,7 @@ return fn + '' === str;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-arrows" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-arrows">arrows</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows">arrows</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var str = 'a =&gt; b';
@@ -14473,7 +14480,7 @@ return eval('(' + str + ')') + '' === str;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString--native-code-" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString--native-code-">[native code]</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-">[native code]</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
@@ -14486,7 +14493,7 @@ return NATIVE_EVAL_RE.test(eval + '');</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-class-expression-with-implicit-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-class-expression-with-implicit-constructor">class expression with implicit constructor</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor">class expression with implicit constructor</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var str = 'class A {}';
@@ -14499,7 +14506,7 @@ return eval('(' + str + ')') + '' === str;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-class-expression-with-explicit-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-class-expression-with-explicit-constructor">class expression with explicit constructor</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor">class expression with explicit constructor</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
@@ -14512,7 +14519,7 @@ return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</d
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-unicode-escape-sequences-in-identifiers" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-unicode-escape-sequences-in-identifiers">unicode escape sequences in identifiers</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers">unicode escape sequences in identifiers</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
@@ -14525,7 +14532,7 @@ return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</d
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-methods-and-computed-property-names" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-methods-and-computed-property-names">methods and computed property names</a>
+            <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names">methods and computed property names</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var str = '[ /\x2A a \x2A/ &quot;f&quot; /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
@@ -14552,7 +14559,7 @@ return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === s
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2---function-sent" class="hash"></div><a href="#ESNEXT-draft--stage-2---function-sent">function.sent</a>
+            <div id="ESNEXT-draft--stage-2---Generator-function-sent-Meta-Property" class="hash"></div><a href="#ESNEXT-draft--stage-2---Generator-function-sent-Meta-Property">Generator function.sent Meta Property</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var result;
@@ -14569,8 +14576,15 @@ return result === 'tromple';</div>}
           <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
         </tr>
         <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-draft--stage-2--Class-and-Property-Decorators" class="hash"></div><a href="#ESNEXT-draft--stage-2--Class-and-Property-Decorators">Class and Property Decorators</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2---class-decorators" class="hash"></div><a href="#ESNEXT-draft--stage-2---class-decorators">class decorators</a>
+            <div id="ESNEXT-draft--stage-2--Class-and-Property-Decorators-class-decorators" class="hash"></div><a href="#ESNEXT-draft--stage-2--Class-and-Property-Decorators-class-decorators">class decorators</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">class A {
@@ -14587,22 +14601,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
           </td>
           <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2---class-properties" class="hash"></div><a href="#ESNEXT-draft--stage-2---class-properties">class properties</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  x = 'x';
-  static y = 'y';
-}
-return new C().x + C.y === 'xy';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
         </tr>
         <tr>
           <td colspan="3" class="feature sub">
@@ -14666,13 +14664,29 @@ return new C().x + C.y === 'xy';</div>}
         <tr>
           <td colspan="3" class="feature sub">
             <h3>
-              <div id="ESNEXT-draft--stage-2--private-fields" class="hash"></div><a href="#ESNEXT-draft--stage-2--private-fields">private fields</a>
+              <div id="ESNEXT-draft--stage-2--class-fields" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields">class fields</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2--private-fields-basic-support" class="hash"></div><a href="#ESNEXT-draft--stage-2--private-fields-basic-support">basic support</a>
+            <div id="ESNEXT-draft--stage-2--class-fields-class-properties" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-class-properties">class properties</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  x = 'x';
+  static y = 'y';
+}
+return new C().x + C.y === 'xy';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-draft--stage-2--class-fields-private-fields-basic-support" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-private-fields-basic-support">private fields basic support</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">class C {
@@ -14693,7 +14707,7 @@ return new C(42).x() === 42;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2--private-fields-initializers" class="hash"></div><a href="#ESNEXT-draft--stage-2--private-fields-initializers">initializers</a>
+            <div id="ESNEXT-draft--stage-2--class-fields-private-fields-initializers" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-private-fields-initializers">private fields initializers</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">class C {
@@ -14793,7 +14807,7 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div id="ESNEXT-proposal--stage-1---frozen-realms" class="hash"></div><a href="#ESNEXT-proposal--stage-1---frozen-realms">frozen realms</a>
+            <div id="ESNEXT-proposal--stage-1---Frozen-Realms-API" class="hash"></div><a href="#ESNEXT-proposal--stage-1---Frozen-Realms-API">Frozen Realms API</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return typeof Reflect.Realm.immutableRoot === 'function'
@@ -14803,61 +14817,6 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           </td>
           <td class="result"><div class="Error" title="Cannot read property &#x27;immutableRoot&#x27; of undefined">Error</div></td>
           <td class="result"><div class="Error" title="Unable to get property &#x27;immutableRoot&#x27; of undefined or null reference">Error</div></td>
-        </tr>
-        <tr>
-          <td colspan="3" class="feature sub">
-            <h3>
-              <div id="ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers">Math methods for 64-bit integers</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-iaddh" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-iaddh">Math.iaddh</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Math.iaddh(0xffffffff, 1, 1, 1) === 3;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Math.iaddh is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;iaddh&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-isubh" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-isubh">Math.isubh</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Math.isubh(0, 4, 1, 1) === 2;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Math.isubh is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;isubh&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-imulh" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-imulh">Math.imulh</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Math.imulh(0xffffffff, 7) === -1;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Math.imulh is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;imulh&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-umulh" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-methods-for-64-bit-integers-Math-umulh">Math.umulh</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Math.umulh(0xffffffff, 7) === 6;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Math.umulh is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;umulh&#x27;">Error</div></td>
         </tr>
         <tr>
           <td colspan="3" class="feature sub">
