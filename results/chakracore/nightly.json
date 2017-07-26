@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-nightly201707251d56946c4f",
+  "_version": "9.0.0-nightly201707261ab71b9a03",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -138,9 +138,9 @@
     "features›template literal revision": "Octal numeric literals and escape characters not allowed in strict mode"
   },
   "ES2017": {
-    "_successful": 60,
+    "_successful": 61,
     "_count": 64,
-    "_percent": 0.9375,
+    "_percent": 0.953125,
     "features›Object static methods›Object.values": true,
     "features›Object static methods›Object.entries": true,
     "features›Object static methods›Object.getOwnPropertyDescriptors": true,
@@ -183,7 +183,7 @@
     "features›shared memory and atomics›Atomics.xor": true,
     "misc›Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets": true,
     "misc›RegExp \"u\" flag, case folding": false,
-    "misc›arguments.caller removed": false,
+    "misc›arguments.caller removed": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__, symbols": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__, ToObject(this)": true,
