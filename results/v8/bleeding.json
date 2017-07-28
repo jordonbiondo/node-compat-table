@@ -1,10 +1,10 @@
 {
-  "_version": "9.0.0-v8-build-b1e10f4b49f11fa6ffa7d6ff3b85b9eb8ffb6c38",
+  "_version": "9.0.0-v8-build-e15f554427beb65c921c80a12f03df18aa90e35a",
   "_engine": "v8 6.2.0 (candidate)",
   "ESNEXT": {
-    "_successful": 9,
+    "_successful": 10,
     "_count": 125,
-    "_percent": 0.072,
+    "_percent": 0.08,
     "candidate (stage 3)›object rest/spread properties›object rest properties": true,
     "candidate (stage 3)›object rest/spread properties›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
@@ -12,7 +12,7 @@
     "candidate (stage 3)›Asynchronous Iterators›async generators": "Unexpected token *",
     "candidate (stage 3)›Asynchronous Iterators›for-await-of loops": "Unexpected reserved word",
     "candidate (stage 3)›RegExp named capture groups": "Invalid regular expression: /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/: Invalid group",
-    "candidate (stage 3)›s (dotAll) flag for regular expressions": "Invalid regular expression flags",
+    "candidate (stage 3)›s (dotAll) flag for regular expressions": true,
     "candidate (stage 3)›RegExp Lookbehind Assertions": "Invalid regular expression: /(?<=a)b/: Invalid group",
     "candidate (stage 3)›RegExp Unicode Property Escapes": "Invalid regular expression: /\\p{Script=Greek}/: Invalid escape",
     "candidate (stage 3)›Function.prototype.toString revision›functions created with the Function constructor": false,
@@ -225,9 +225,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 676,
+    "_successful": 675,
     "_count": 679,
-    "_percent": 0.9955817378497791,
+    "_percent": 0.9941089837997055,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": true,
@@ -802,7 +802,7 @@
     "misc›Proxy, internal 'get' calls›Error.prototype.toString": true,
     "misc›Proxy, internal 'get' calls›String.raw": true,
     "misc›Proxy, internal 'get' calls›RegExp constructor": true,
-    "misc›Proxy, internal 'get' calls›RegExp.prototype.flags": true,
+    "misc›Proxy, internal 'get' calls›RegExp.prototype.flags": false,
     "misc›Proxy, internal 'get' calls›RegExp.prototype.test": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype.toString": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.match]": true,
