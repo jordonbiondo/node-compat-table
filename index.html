@@ -190,8 +190,14 @@
                     </tr>
                   </table>
                 </div><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub></th>
-              <th class="version v6">6.11.1
+              <th class="version v6">6.11.2
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.11.2</td>
+                      <td>v8 5.1.281.103</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.11.1</td>
@@ -18245,8 +18251,14 @@ return a === 3;</div>}
                     </tr>
                   </table>
                 </div><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub></th>
-              <th class="version v6">6.11.1
+              <th class="version v6">6.11.2
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.11.2</td>
+                      <td>v8 5.1.281.103</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.11.1</td>
@@ -19301,8 +19313,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                     </tr>
                   </table>
                 </div><sub class="flagged">54% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th class="version v6">6.11.1
+              <th class="version v6">6.11.2
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.11.2</td>
+                      <td>v8 5.1.281.103</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.11.1</td>
@@ -21602,8 +21620,14 @@ return i === 0;</div>}
                     </tr>
                   </table>
                 </div><sub class="flagged">0% complete</sub><sub class="unflagged">0% complete</sub></th>
-              <th class="version v6">6.11.1
+              <th class="version v6">6.11.2
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.11.2</td>
+                      <td>v8 5.1.281.103</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.11.1</td>
@@ -22324,8 +22348,14 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                     </tr>
                   </table>
                 </div><sub class="flagged">6% complete</sub><sub class="unflagged">5% complete</sub></th>
-              <th class="version v6">6.11.1
+              <th class="version v6">6.11.2
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.11.2</td>
+                      <td>v8 5.1.281.103</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.11.1</td>
@@ -23114,6 +23144,92 @@ return regexGreekSymbol.test('π');</div>}
         <tr>
           <td colspan="11" class="feature sub">
             <h3>
+              <div id="ESNEXT-candidate--stage-3--class-fields" class="hash"></div><a href="#ESNEXT-candidate--stage-3--class-fields">class fields</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--class-fields-class-properties" class="hash"></div><a href="#ESNEXT-candidate--stage-3--class-fields-class-properties">class properties</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  x = 'x';
+  static y = 'y';
+}
+return new C().x + C.y === 'xy';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--class-fields-private-fields-basic-support" class="hash"></div><a href="#ESNEXT-candidate--stage-3--class-fields-private-fields-basic-support">private fields basic support</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  #x;
+  constructor(x){
+    this.#x = x;
+  }
+  x(){
+    return this.#x;
+  }
+}
+return new C(42).x() === 42;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--class-fields-private-fields-initializers" class="hash"></div><a href="#ESNEXT-candidate--stage-3--class-fields-private-fields-initializers">private fields initializers</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  #x = 42;
+  x(){
+    return this.#x;
+  }
+}
+return new C().x() === 42;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
               <div id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision" class="hash"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision">Function.prototype.toString revision</a>
             </h3>
           </td>
@@ -23499,92 +23615,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
  has no method &#x27;trimEnd&#x27;">Error</div><div class="Error flagged " title="Object  	 
  abc   	
  has no method &#x27;trimEnd&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td colspan="11" class="feature sub">
-            <h3>
-              <div id="ESNEXT-draft--stage-2--class-fields" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields">class fields</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2--class-fields-class-properties" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-class-properties">class properties</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  x = 'x';
-  static y = 'y';
-}
-return new C().x + C.y === 'xy';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token =">Error</div><div class="Error flagged " title="Unexpected token =">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2--class-fields-private-fields-basic-support" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-private-fields-basic-support">private fields basic support</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  #x;
-  constructor(x){
-    this.#x = x;
-  }
-  x(){
-    return this.#x;
-  }
-}
-return new C(42).x() === 42;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div id="ESNEXT-draft--stage-2--class-fields-private-fields-initializers" class="hash"></div><a href="#ESNEXT-draft--stage-2--class-fields-private-fields-initializers">private fields initializers</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  #x = 42;
-  x(){
-    return this.#x;
-  }
-}
-return new C().x() === 42;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
         </tr>
       </table>
       <table class="results">
