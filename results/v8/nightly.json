@@ -1,12 +1,12 @@
 {
-  "_version": "9.0.0-nightly20170801cee8d6d65e",
-  "_engine": "v8 5.9.211.39",
+  "_version": "9.0.0-nightly20170802e506bcd899",
+  "_engine": "v8 6.0.286.52",
   "ESNEXT": {
-    "_successful": 7,
+    "_successful": 9,
     "_count": 125,
-    "_percent": 0.056,
-    "candidate (stage 3)›object rest/spread properties›object rest properties": "Unexpected token ...",
-    "candidate (stage 3)›object rest/spread properties›object spread properties": "Unexpected token ...",
+    "_percent": 0.072,
+    "candidate (stage 3)›object rest/spread properties›object rest properties": true,
+    "candidate (stage 3)›object rest/spread properties›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
     "candidate (stage 3)›global›\"global\" global property has correct property descriptor": false,
     "candidate (stage 3)›Asynchronous Iterators›async generators": "Unexpected token *",
