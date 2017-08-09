@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-nightly20170806470fbc1ca6",
+  "_version": "9.0.0-nightly201708098038ab44fa",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -225,9 +225,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 675,
-    "_count": 679,
-    "_percent": 0.9941089837997055,
+    "_successful": 677,
+    "_count": 681,
+    "_percent": 0.9941262848751835,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Out of stack space",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Out of stack space",
     "syntax›default function parameters›basic functionality": true,
@@ -731,6 +731,8 @@
     "built-in extensions›Number properties›Number.isInteger": true,
     "built-in extensions›Number properties›Number.isSafeInteger": true,
     "built-in extensions›Number properties›Number.isNaN": true,
+    "built-in extensions›Number properties›Number.parseFloat": true,
+    "built-in extensions›Number properties›Number.parseInt": true,
     "built-in extensions›Number properties›Number.EPSILON": true,
     "built-in extensions›Number properties›Number.MIN_SAFE_INTEGER": true,
     "built-in extensions›Number properties›Number.MAX_SAFE_INTEGER": true,

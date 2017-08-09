@@ -225,9 +225,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": "Proxy is not defined"
   },
   "ES2015": {
-    "_successful": 393,
-    "_count": 679,
-    "_percent": 0.5787923416789397,
+    "_successful": 395,
+    "_count": 681,
+    "_percent": 0.580029368575624,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": "Unexpected token =",
@@ -731,6 +731,8 @@
     "built-in extensions›Number properties›Number.isInteger": true,
     "built-in extensions›Number properties›Number.isSafeInteger": true,
     "built-in extensions›Number properties›Number.isNaN": true,
+    "built-in extensions›Number properties›Number.parseFloat": true,
+    "built-in extensions›Number properties›Number.parseInt": true,
     "built-in extensions›Number properties›Number.EPSILON": true,
     "built-in extensions›Number properties›Number.MIN_SAFE_INTEGER": true,
     "built-in extensions›Number properties›Number.MAX_SAFE_INTEGER": true,

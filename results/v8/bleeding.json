@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-v8-build-d929cc755c2892832f4e6c9d53bef2890b9733d6",
+  "_version": "9.0.0-v8-build-c5263279eb87d20f69a121f2c2808fae3af12679",
   "_engine": "v8 6.2.0 (candidate)",
   "ESNEXT": {
     "_successful": 11,
@@ -225,9 +225,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 675,
-    "_count": 679,
-    "_percent": 0.9941089837997055,
+    "_successful": 677,
+    "_count": 681,
+    "_percent": 0.9941262848751835,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": true,
@@ -731,6 +731,8 @@
     "built-in extensions›Number properties›Number.isInteger": true,
     "built-in extensions›Number properties›Number.isSafeInteger": true,
     "built-in extensions›Number properties›Number.isNaN": true,
+    "built-in extensions›Number properties›Number.parseFloat": true,
+    "built-in extensions›Number properties›Number.parseInt": true,
     "built-in extensions›Number properties›Number.EPSILON": true,
     "built-in extensions›Number properties›Number.MIN_SAFE_INTEGER": true,
     "built-in extensions›Number properties›Number.MAX_SAFE_INTEGER": true,

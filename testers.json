@@ -503,6 +503,8 @@
     "built-in extensions›Number properties›Number.isInteger": "return typeof Number.isInteger === 'function';",
     "built-in extensions›Number properties›Number.isSafeInteger": "return typeof Number.isSafeInteger === 'function';",
     "built-in extensions›Number properties›Number.isNaN": "return typeof Number.isNaN === 'function';",
+    "built-in extensions›Number properties›Number.parseFloat": "var actualGlobal = Function('return this')();\nreturn typeof Number.parseFloat === 'function'\n  && Number.parseFloat === actualGlobal.parseFloat;",
+    "built-in extensions›Number properties›Number.parseInt": "var actualGlobal = Function('return this')();\nreturn typeof Number.parseInt === 'function'\n  && Number.parseInt === actualGlobal.parseInt;",
     "built-in extensions›Number properties›Number.EPSILON": "return typeof Number.EPSILON === 'number';",
     "built-in extensions›Number properties›Number.MIN_SAFE_INTEGER": "return typeof Number.MIN_SAFE_INTEGER === 'number';",
     "built-in extensions›Number properties›Number.MAX_SAFE_INTEGER": "return typeof Number.MAX_SAFE_INTEGER === 'number';",
