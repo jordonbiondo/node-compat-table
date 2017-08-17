@@ -13519,7 +13519,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.2.0 (candidate)</td>
                     </tr>
                   </table>
-                </div><sup>v8</sup><sub class="unflagged">8% complete</sub></th>
+                </div><sup>v8</sup><sub class="unflagged">7% complete</sub></th>
               <th class="version v9">9.0.0
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
@@ -14105,6 +14105,21 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           </td>
           <td class="result"><div class="Error" title="Cannot read property &#x27;immutableRoot&#x27; of undefined">Error</div></td>
           <td class="result"><div class="Error" title="Unable to get property &#x27;immutableRoot&#x27; of undefined or null reference">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1---Math-signbit" class="hash"></div><a href="#ESNEXT-proposal--stage-1---Math-signbit">Math.signbit</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.signbit(-0) === false
+  &amp;&amp; Math.signbit(0) === true
+  &amp;&amp; Math.signbit(-42) === false
+  &amp;&amp; Math.signbit(42) === true;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.signbit is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;signbit&#x27;">Error</div></td>
         </tr>
         <tr>
           <td colspan="3" class="feature sub">
@@ -15009,6 +15024,222 @@ return Symbol.observable in Observable.prototype &amp;&amp; o[Symbol.observable]
           </td>
           <td class="result"><div class="Error" title="Observable is not defined">Error</div></td>
           <td class="result"><div class="Error" title="&#x27;Observable&#x27; is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal">Math extensions proposal</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-clamp" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-clamp">Math.clamp</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.clamp(2, 4, 6) === 4
+  &amp;&amp; Math.clamp(4, 2, 6) === 4
+  &amp;&amp; Math.clamp(6, 2, 4) === 4;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.clamp is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;clamp&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-DEG_PER_RAD" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-DEG_PER_RAD">Math.DEG_PER_RAD</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.DEG_PER_RAD === Math.PI / 180;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-degrees" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-degrees">Math.degrees</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.degrees(Math.PI / 2) === 90
+  &amp;&amp; Math.degrees(Math.PI) === 180;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.degrees is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;degrees&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-fscale" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-fscale">Math.fscale</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.fscale(3, 1, 2, 1, Math.PI) === Math.fround((3 - 1) * (Math.PI - 1) / (2 - 1) + 1);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.fscale is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fscale&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-RAD_PER_DEG" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-RAD_PER_DEG">Math.RAD_PER_DEG</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.RAD_PER_DEG === 180 / Math.PI;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-radians" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-radians">Math.radians</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.radians(90) === Math.PI / 2
+  &amp;&amp; Math.radians(180) === Math.PI;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.radians is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;radians&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-scale" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Math-extensions-proposal-Math-scale">Math.scale</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Math.scale(0, 3, 5, 8, 10) === 5;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Math.scale is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;scale&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-proposal--stage-1--Promise-try" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try">Promise.try</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-basic-support" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-basic-support">basic support</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return typeof Promise.try === 'function';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-returns-instance-of-Promise" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-returns-instance-of-Promise">returns instance of Promise</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Promise.try(function () {}) instanceof Promise;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-call-function-synchronously" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-call-function-synchronously">call function synchronously</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise.try(function () { score++ });
+return score === 1;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-function-returns-value" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-function-returns-value">function returns value</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise.try(function() {
+  score++;
+  return 'foo';
+}).then(function(val) {
+  score += (val === 'foo');
+  if (score === 2) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-function-throws-exception" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-function-throws-exception">function throws exception</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise.try(function() {
+  score++;
+  throw 'bar';
+}).catch(function(err) {
+  score += (err === 'bar');
+  if (score === 2) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-function-returns-fulfilled-Promise" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-function-returns-fulfilled-Promise">function returns fulfilled Promise</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise.try(function() {
+  score++;
+  return Promise.resolve('foo');
+}).then(function(val) {
+  score += (val === 'foo');
+  if (score === 2) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1--Promise-try-function-returns-rejected-Promise" class="hash"></div><a href="#ESNEXT-proposal--stage-1--Promise-try-function-returns-rejected-Promise">function returns rejected Promise</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise.try(function() {
+  score++;
+  return Promise.reject('bar');
+}).catch(function(err) {
+  score += (err === 'bar');
+  if (score === 2) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Promise.try is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;try&#x27;">Error</div></td>
         </tr>
       </table>
       <table class="results">
