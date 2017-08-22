@@ -14000,6 +14000,74 @@ function check() {
           <td class="result"><div class="Error" title="Promise.reject(...).finally is not a function">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
         </tr>
+        <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-candidate--stage-3--optional-catch-binding" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding">optional catch binding</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-basic" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-basic">basic</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+  throw new Error();
+}
+catch {
+  return true;
+}
+return false;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-await" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-await">await</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">(async function (){
+  try {
+    await Promise.reject();
+  }
+  catch {
+    asyncTestPassed();
+  }
+})();</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-yield" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-yield">yield</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function *foo() {
+  try {
+    yield;
+    throw new Error();
+  }
+  catch {
+    return true;
+  }
+}
+
+var it = foo();
+it.next();
+return it.next().value;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
       </table>
       <table class="results">
         <caption>

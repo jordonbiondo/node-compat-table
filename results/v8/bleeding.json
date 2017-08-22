@@ -1,10 +1,10 @@
 {
-  "_version": "9.0.0-v8-build-0d14ae178113539e76c4733f73ad8197f18427f4",
+  "_version": "9.0.0-v8-build-208cdfd933b7ebf583ddd5e3fdc3eba404abe496",
   "_engine": "v8 6.2.0 (candidate)",
   "ESNEXT": {
     "_successful": 11,
-    "_count": 153,
-    "_percent": 0.0718954248366013,
+    "_count": 156,
+    "_percent": 0.07051282051282051,
     "candidate (stage 3)›object rest/spread properties›object rest properties": true,
     "candidate (stage 3)›object rest/spread properties›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
@@ -28,6 +28,9 @@
     "candidate (stage 3)›Promise.prototype.finally›basic support": "p1.finally is not a function",
     "candidate (stage 3)›Promise.prototype.finally›don't change resolution value": "Promise.resolve(...).finally is not a function",
     "candidate (stage 3)›Promise.prototype.finally›change rejection value": "Promise.reject(...).finally is not a function",
+    "candidate (stage 3)›optional catch binding›basic": "Unexpected token {",
+    "candidate (stage 3)›optional catch binding›await": "Unexpected token {",
+    "candidate (stage 3)›optional catch binding›yield": "Unexpected token {",
     "draft (stage 2)›Generator function.sent Meta Property": "Unexpected token .",
     "draft (stage 2)›Class and Property Decorators›class decorators": "Invalid or unexpected token",
     "draft (stage 2)›string trimming›String.prototype.trimLeft": true,

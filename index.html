@@ -24414,6 +24414,101 @@ function check() {
           <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Promise is not defined">Error</div><div class="Error flagged " title="Promise is not defined">Error</div></td>
         </tr>
+        <tr>
+          <td colspan="12" class="feature sub">
+            <h3>
+              <div id="ESNEXT-candidate--stage-3--optional-catch-binding" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding">optional catch binding</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-basic" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-basic">basic</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+  throw new Error();
+}
+catch {
+  return true;
+}
+return false;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-await" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-await">await</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">(async function (){
+  try {
+    await Promise.reject();
+  }
+  catch {
+    asyncTestPassed();
+  }
+})();</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="missing ) after argument list">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="missing ) after argument list">Error</div><div class="Error flagged " title="missing ) after argument list">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="missing ) after argument list">Error</div><div class="Error flagged " title="missing ) after argument list">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="missing ) after argument list">Error</div><div class="Error flagged " title="missing ) after argument list">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="missing ) after argument list">Error</div><div class="Error flagged " title="missing ) after argument list">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token function">Error</div><div class="Error flagged " title="Unexpected token function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token function">Error</div><div class="Error flagged " title="Unexpected token function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-candidate--stage-3--optional-catch-binding-yield" class="hash"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-yield">yield</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function *foo() {
+  try {
+    yield;
+    throw new Error();
+  }
+  catch {
+    return true;
+  }
+}
+
+var it = foo();
+it.next();
+return it.next().value;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token {">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token {">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        </tr>
       </table>
       <table class="results">
         <caption>
