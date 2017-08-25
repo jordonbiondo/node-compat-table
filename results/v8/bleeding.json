@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-v8-build-25decc66ae3630d275d2757d7c80f052da7b7d9f",
+  "_version": "9.0.0-v8-build-234d4307d75bdbd9f1a15c1ae1aa19ef149ced75",
   "_engine": "v8 6.2.0 (candidate)",
   "ESNEXT": {
     "_successful": 11,
@@ -163,10 +163,10 @@
     "pre-strawman›Metadata reflection API›Reflect.metadata": false
   },
   "ES2018": {
-    "_successful": 0,
+    "_successful": 1,
     "_count": 1,
-    "_percent": 0,
-    "features›template literal revision": "Octal escape sequences are not allowed in strict mode."
+    "_percent": 1,
+    "features›template literal revision": true
   },
   "ES2017": {
     "_successful": 64,
