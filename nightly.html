@@ -2020,6 +2020,20 @@ return function({ [qux]: grault }) {
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div id="ES2015-syntax-destructuring--parameters-defaults--arrow-function" class="hash"></div><a href="#ES2015-syntax-destructuring--parameters-defaults--arrow-function">defaults, arrow function</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ((a, {b = 0, c = 3}) =&gt; {
+  return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3;
+})(1, {b: 2});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;:&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td colspan="3" class="feature sub">
             <h3>
               <div id="ES2015-syntax-Unicode-code-point-escapes" class="hash"></div><a href="#ES2015-syntax-Unicode-code-point-escapes">Unicode code point escapes</a>

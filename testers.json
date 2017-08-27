@@ -127,6 +127,7 @@
     "syntax›destructuring, parameters›defaults": "return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},\n    [f = 6, g = 0, h = 8]) {\n  return a === 1 && b === 2 && c === 3 && d === 4 &&\n    e === 5 && f === 6 && g === 7 && h === 8;\n}({b:2, c:undefined, x:4},[, 7, undefined]));",
     "syntax›destructuring, parameters›defaults, separate scope": "return (function({a=function(){\n  return typeof b === 'undefined';\n}}){\n  var b = 1;\n  return a();\n}({}));",
     "syntax›destructuring, parameters›defaults, new Function() support": "return new Function(\"{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}\",\n  \"return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;\"\n)({b:2, c:undefined, x:4});",
+    "syntax›destructuring, parameters›defaults, arrow function": "return ((a, {b = 0, c = 3}) => {\n  return a === 1 && b === 2 && c === 3;\n})(1, {b: 2});",
     "syntax›Unicode code point escapes›in strings": "return '\\u{1d306}' == '\\ud834\\udf06';",
     "syntax›Unicode code point escapes›in identifiers": "var \\u{102C0} = { \\u{102C0} : 2 };\nreturn \\u{102C0}['\\ud800\\udec0'] === 2;",
     "syntax›new.target›in constructors": "var passed = false;\nnew function f() {\n  passed = (new.target === f);\n}();\n(function() {\n  passed &= (new.target === undefined);\n}());\nreturn passed;",
