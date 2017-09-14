@@ -1,6 +1,6 @@
 {
-  "_version": "9.0.0-nightly20170912a10856a7d3--es_staging",
-  "_engine": "v8 6.0.287.53",
+  "_version": "9.0.0-nightly20170913bf1ca8fb2e--es_staging",
+  "_engine": "v8 6.1.534.36",
   "ESNEXT": {
     "_successful": 15,
     "_count": 156,
@@ -123,7 +123,7 @@
     "proposal (stage 1)›Promise.try›function returns fulfilled Promise": "Promise.try is not a function",
     "proposal (stage 1)›Promise.try›function returns rejected Promise": "Promise.try is not a function",
     "proposal (stage 1)›Array.prototype.{flatten, flatMap}›Array.prototype.flatten": "[1,[2,3],[4,[5,6]]].flatten is not a function",
-    "proposal (stage 1)›Array.prototype.{flatten, flatMap}›Array.prototype.flatMap": "[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function",
+    "proposal (stage 1)›Array.prototype.{flatten, flatMap}›Array.prototype.flatMap": "[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Map.of": "Map.of is not a function",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Map.from": "Map.from is not a function",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Set.of": "Set.of is not a function",
