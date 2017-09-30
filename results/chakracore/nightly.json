@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-nightly20170929a9f5394b01",
+  "_version": "9.0.0-nightly201709308b22a65b5a",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -37,6 +37,9 @@
     "draft (stage 2)›string trimming›String.prototype.trimRight": true,
     "draft (stage 2)›string trimming›String.prototype.trimStart": "Object doesn't support property or method 'trimStart'",
     "draft (stage 2)›string trimming›String.prototype.trimEnd": "Object doesn't support property or method 'trimEnd'",
+    "draft (stage 2)›String.prototype.matchAll": "Object doesn't support property or method 'matchAll'",
+    "draft (stage 2)›Array.prototype.{flatten, flatMap}›Array.prototype.flatten": "Object doesn't support property or method 'flatten'",
+    "draft (stage 2)›Array.prototype.{flatten, flatMap}›Array.prototype.flatMap": "Object doesn't support property or method 'flatMap'",
     "proposal (stage 1)›do expressions": "Syntax error",
     "proposal (stage 1)›SIMD (Single Instruction, Multiple Data)›basic support": false,
     "proposal (stage 1)›SIMD (Single Instruction, Multiple Data)›Float32x4": "'SIMD' is not defined",
@@ -104,7 +107,6 @@
     "proposal (stage 1)›Observable›Observable.prototype[Symbol.observable]": "'Observable' is not defined",
     "proposal (stage 1)›Observable›Observable.of": "'Observable' is not defined",
     "proposal (stage 1)›Observable›Observable.from": "'Observable' is not defined",
-    "proposal (stage 1)›String.prototype.matchAll": "Object doesn't support property or method 'matchAll'",
     "proposal (stage 1)›weak references": "'System' is not defined",
     "proposal (stage 1)›Frozen Realms API": "Unable to get property 'immutableRoot' of undefined or null reference",
     "proposal (stage 1)›Math.signbit": "Object doesn't support property or method 'signbit'",
@@ -122,8 +124,6 @@
     "proposal (stage 1)›Promise.try›function throws exception": "Object doesn't support property or method 'try'",
     "proposal (stage 1)›Promise.try›function returns fulfilled Promise": "Object doesn't support property or method 'try'",
     "proposal (stage 1)›Promise.try›function returns rejected Promise": "Object doesn't support property or method 'try'",
-    "proposal (stage 1)›Array.prototype.{flatten, flatMap}›Array.prototype.flatten": "Object doesn't support property or method 'flatten'",
-    "proposal (stage 1)›Array.prototype.{flatten, flatMap}›Array.prototype.flatMap": "Object doesn't support property or method 'flatMap'",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Map.of": "Object doesn't support property or method 'of'",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Map.from": "Object doesn't support property or method 'from'",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›Set.of": "Object doesn't support property or method 'of'",
