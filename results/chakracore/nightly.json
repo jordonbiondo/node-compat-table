@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-nightly201709308b22a65b5a",
+  "_version": "9.0.0-nightly201710016852c75c61",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -256,9 +256,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 677,
+    "_successful": 676,
     "_count": 682,
-    "_percent": 0.9926686217008798,
+    "_percent": 0.9912023460410557,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Out of stack space",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Out of stack space",
     "syntax›default function parameters›basic functionality": true,
@@ -671,7 +671,7 @@
     "built-ins›Symbol›new Symbol() throws": true,
     "built-ins›Symbol›Object(symbol)": true,
     "built-ins›Symbol›JSON.stringify ignores symbol primitives": true,
-    "built-ins›Symbol›JSON.stringify ignores symbol objects": true,
+    "built-ins›Symbol›JSON.stringify ignores symbol objects": false,
     "built-ins›Symbol›global symbol registry": true,
     "built-ins›well-known symbols›Symbol.hasInstance": true,
     "built-ins›well-known symbols›Symbol.isConcatSpreadable": true,
