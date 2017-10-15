@@ -13533,7 +13533,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.4.0 (candidate)</td>
                     </tr>
                   </table>
-                </div><sup>v8</sup><sub class="unflagged">10% complete</sub></th>
+                </div><sup>v8</sup><sub class="unflagged">9% complete</sub></th>
               <th class="version v9">9.0.0
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
@@ -14255,6 +14255,87 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
           <td class="result"><div class="Error" title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatMap&#x27;">Error</div></td>
         </tr>
+        <tr>
+          <td colspan="3" class="feature sub">
+            <h3>
+              <div id="ESNEXT-draft--stage-2--throw-expressions" class="hash"></div><a href="#ESNEXT-draft--stage-2--throw-expressions">throw expressions</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-draft--stage-2--throw-expressions-logical" class="hash"></div><a href="#ESNEXT-draft--stage-2--throw-expressions-logical">logical</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a, b;
+try {
+  a = 19 || throw 77;
+  b = 88 &amp;&amp; throw 23;
+} catch (e) {
+  return a + e === 42;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token throw">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-draft--stage-2--throw-expressions-parameter-initializers" class="hash"></div><a href="#ESNEXT-draft--stage-2--throw-expressions-parameter-initializers">parameter initializers</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function fn (arg = throw 42) {
+  return arg;
+}
+
+if (fn(21) !== 21) return false;
+
+try {
+  fn();
+} catch (e) {
+  return e === 42;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token throw">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-draft--stage-2--throw-expressions-arrow-function-bodies" class="hash"></div><a href="#ESNEXT-draft--stage-2--throw-expressions-arrow-function-bodies">arrow function bodies</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var fn = () =&gt; throw 42;
+try {
+  fn();
+} catch (e) {
+  return e === 42;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token throw">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-draft--stage-2--throw-expressions-conditionals" class="hash"></div><a href="#ESNEXT-draft--stage-2--throw-expressions-conditionals">conditionals</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">true ? 42 : throw 21;
+try {
+  false ? 42 : throw 21;
+} catch (e) {
+  return e === 21;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token throw">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
       </table>
       <table class="results">
         <caption>
@@ -14342,6 +14423,46 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           </td>
           <td class="result"><div class="Error" title="Math.signbit is not a function">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;signbit&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1---the-pipeline-operator" class="hash"></div><a href="#ESNEXT-proposal--stage-1---the-pipeline-operator">the pipeline operator</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function doubleSay (str) {
+  return str + ', ' + str;
+}
+function capitalize (str) {
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+var result = 'hello'
+  |&gt; doubleSay
+  |&gt; capitalize
+  |&gt; _ =&gt; _ + '!';
+
+return result === 'Hello, hello!';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token &gt;">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div id="ESNEXT-proposal--stage-1---extensible-numeric-literals" class="hash"></div><a href="#ESNEXT-proposal--stage-1---extensible-numeric-literals">extensible numeric literals</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function i (str, num) {
+  return typeof str + str + typeof num + num;
+}
+
+return 123i === 'string123number123';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;;&#x27;">Error</div></td>
         </tr>
         <tr>
           <td colspan="3" class="feature sub">
