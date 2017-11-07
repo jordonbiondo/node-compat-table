@@ -1,5 +1,5 @@
 {
-  "_version": "9.0.0-nightly201711054ddf7934e9",
+  "_version": "9.0.0-nightly2017110735c8c3a0d7",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -262,9 +262,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 677,
+    "_successful": 676,
     "_count": 682,
-    "_percent": 0.9926686217008798,
+    "_percent": 0.9912023460410557,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Out of stack space",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Out of stack space",
     "syntax›default function parameters›basic functionality": true,
@@ -516,7 +516,7 @@
     "built-ins›typed arrays›DataView (Float32)": true,
     "built-ins›typed arrays›DataView (Float64)": true,
     "built-ins›typed arrays›ArrayBuffer[Symbol.species]": true,
-    "built-ins›typed arrays›constructors require new": true,
+    "built-ins›typed arrays›constructors require new": "Expected ';'",
     "built-ins›typed arrays›constructors accept generic iterables": true,
     "built-ins›typed arrays›correct prototype chains": true,
     "built-ins›typed arrays›%TypedArray%.from": true,

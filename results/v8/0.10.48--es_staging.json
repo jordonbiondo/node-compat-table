@@ -516,7 +516,7 @@
     "built-ins›typed arrays›DataView (Float32)": true,
     "built-ins›typed arrays›DataView (Float64)": true,
     "built-ins›typed arrays›ArrayBuffer[Symbol.species]": "Symbol is not defined",
-    "built-ins›typed arrays›constructors require new": false,
+    "built-ins›typed arrays›constructors require new": "Unexpected identifier",
     "built-ins›typed arrays›constructors accept generic iterables": false,
     "built-ins›typed arrays›correct prototype chains": false,
     "built-ins›typed arrays›%TypedArray%.from": false,

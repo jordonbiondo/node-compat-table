@@ -262,9 +262,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": "Proxy is not defined"
   },
   "ES2015": {
-    "_successful": 372,
+    "_successful": 371,
     "_count": 682,
-    "_percent": 0.5454545454545454,
+    "_percent": 0.5439882697947214,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": "Unexpected token =",
@@ -516,7 +516,7 @@
     "built-ins›typed arrays›DataView (Float32)": true,
     "built-ins›typed arrays›DataView (Float64)": true,
     "built-ins›typed arrays›ArrayBuffer[Symbol.species]": false,
-    "built-ins›typed arrays›constructors require new": true,
+    "built-ins›typed arrays›constructors require new": "Unexpected identifier",
     "built-ins›typed arrays›constructors accept generic iterables": true,
     "built-ins›typed arrays›correct prototype chains": false,
     "built-ins›typed arrays›%TypedArray%.from": true,

@@ -262,9 +262,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 679,
+    "_successful": 678,
     "_count": 682,
-    "_percent": 0.9956011730205279,
+    "_percent": 0.9941348973607038,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
@@ -516,7 +516,7 @@
     "built-ins›typed arrays›DataView (Float32)": true,
     "built-ins›typed arrays›DataView (Float64)": true,
     "built-ins›typed arrays›ArrayBuffer[Symbol.species]": true,
-    "built-ins›typed arrays›constructors require new": true,
+    "built-ins›typed arrays›constructors require new": "Unexpected identifier",
     "built-ins›typed arrays›constructors accept generic iterables": true,
     "built-ins›typed arrays›correct prototype chains": true,
     "built-ins›typed arrays›%TypedArray%.from": true,
