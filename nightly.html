@@ -34,7 +34,7 @@
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
                     <tr>
-                      <td>9.0.0</td>
+                      <td>10.0.0</td>
                       <td>chakracore 1.7.1.0</td>
                     </tr>
                   </table>
@@ -4312,7 +4312,7 @@ var constructors = [
   'Uint32Array',
   'Float32Array',
   'Float64Array'
-];
+];Updated identifier syntax
 return constructors.every(function (constructor) {
   try {
     if (constructor in global) {
@@ -4326,8 +4326,8 @@ return constructors.every(function (constructor) {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error" title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;;&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -12045,7 +12045,7 @@ return a === 3;</div>}
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
                     <tr>
-                      <td>9.0.0</td>
+                      <td>10.0.0</td>
                       <td>chakracore 1.7.1.0</td>
                     </tr>
                   </table>
@@ -12343,7 +12343,7 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
                     <tr>
-                      <td>9.0.0</td>
+                      <td>10.0.0</td>
                       <td>chakracore 1.7.1.0</td>
                     </tr>
                   </table>
@@ -13478,7 +13478,7 @@ return i === 0;</div>}
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
                     <tr>
-                      <td>9.0.0</td>
+                      <td>10.0.0</td>
                       <td>chakracore 1.7.1.0</td>
                     </tr>
                   </table>
@@ -13538,7 +13538,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                 <div class="details"><small>(these versions have identical results)</small>
                   <table>
                     <tr>
-                      <td>9.0.0</td>
+                      <td>10.0.0</td>
                       <td>chakracore 1.7.1.0</td>
                     </tr>
                   </table>
