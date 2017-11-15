@@ -1,5 +1,5 @@
 {
-  "_version": "10.0.0-nightly201711109f473d41ac",
+  "_version": "10.0.0-nightly20171115321e4a1b11",
   "_engine": "chakracore 1.7.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -218,7 +218,7 @@
     "features›shared memory and atomics›Atomics.store": true,
     "features›shared memory and atomics›Atomics.sub": true,
     "features›shared memory and atomics›Atomics.xor": true,
-    "misc›Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets": true,
+    "misc›Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets (ES Draft style)": true,
     "misc›RegExp \"u\" flag, case folding": false,
     "misc›arguments.caller removed": true,
     "annex b›Object.prototype getter/setter methods›__defineGetter__": true,
@@ -262,9 +262,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 676,
+    "_successful": 677,
     "_count": 682,
-    "_percent": 0.9912023460410557,
+    "_percent": 0.9926686217008798,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Out of stack space",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Out of stack space",
     "syntax›default function parameters›basic functionality": true,
@@ -516,7 +516,7 @@
     "built-ins›typed arrays›DataView (Float32)": true,
     "built-ins›typed arrays›DataView (Float64)": true,
     "built-ins›typed arrays›ArrayBuffer[Symbol.species]": true,
-    "built-ins›typed arrays›constructors require new": "Expected ';'",
+    "built-ins›typed arrays›constructors require new": true,
     "built-ins›typed arrays›constructors accept generic iterables": true,
     "built-ins›typed arrays›correct prototype chains": true,
     "built-ins›typed arrays›%TypedArray%.from": true,
