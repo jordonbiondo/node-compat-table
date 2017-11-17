@@ -18,9 +18,9 @@ The webpage is hosted via GitHub.
 
 The `build.js` file:
 1) aggregates the data from the `/results` folder for the versions listed in `v8.versions`
-2) uses `index.jade` to generate `index.html`
+2) uses `index.pug` to generate `index.html`
 
-So, change `index.jade` then run:
+So, change `index.pug` then run:
 ```bash
 $ node build.js
 ```

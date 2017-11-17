@@ -1,4 +1,4 @@
-var jade = require('jade')
+var pug = require('pug')
 var utils = require('./utils.js');
 var $escape = utils.$escape
 var $get = utils.$get
@@ -40,7 +40,7 @@ function result (type, nodeVersion, esVersion, path) {
   return `<div class="${result} ${type} ${flagRequired ? 'required' : ''}" title="${$escape(title)}">${result === 'Yes' && flagRequired ? 'Flag' : result}</div>`
 }
 
-var html = jade.renderFile('index.jade', {
+var html = pug.renderFile('index.pug', {
   pretty: true,
   flaggable: true,
   headers: headers,

@@ -1,4 +1,4 @@
-var jade = require('jade')
+var pug = require('pug')
 var utils = require('./utils.js');
 var $escape = utils.$escape
 var $get = utils.$get
@@ -28,7 +28,7 @@ var headers = {
   }
 }
 
-var html = jade.renderFile('index.jade', {
+var html = pug.renderFile('index.pug', {
   pretty: true,
   headers: headers,
   testers: testers,
