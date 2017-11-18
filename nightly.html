@@ -13016,7 +13016,7 @@ p.then(function(result) {
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2017-misc--Proxy--ownKeys--handler--duplicate-keys-for-non-extensible-targets--ES-Draft-style-"></div><a href="#ES2017-misc--Proxy--ownKeys--handler--duplicate-keys-for-non-extensible-targets--ES-Draft-style-">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES Draft style)</a>
+            <div class="hash" id="ES2017-misc--Proxy--ownKeys--handler--duplicate-keys-for-non-extensible-targets--ES-2017-semantics-"></div><a href="#ES2017-misc--Proxy--ownKeys--handler--duplicate-keys-for-non-extensible-targets--ES-2017-semantics-">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets (ES 2017 semantics)</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
@@ -13029,7 +13029,7 @@ return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
             </div>
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15803,6 +15803,209 @@ return foo?.baz() === 42 &amp;&amp; bar?.baz() === undefined;</div>}
           <td class="result"><div class="Error" title="Unexpected token .">Error</div></td>
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax">partial application syntax</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-left"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-left">partial application from left</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b) {
+  return a + b;
+};
+var p = f('a', ?);
+return p('b') === 'ab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-right"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-right">partial application from right</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b) {
+  return a + b;
+};
+var p = f(?, 'b');
+return p('a') === 'ab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-for-any-arg"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-for-any-arg">partial application for any arg</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b, c) {
+  return a + b + c;
+};
+var p = f(?, 'b', ?);
+return p('a', 'c') === 'abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-left-with-rest"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-left-with-rest">partial application from left with rest</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b, c) {
+  return a + b + c;
+};
+var p = f('a', ...);
+return p('b', 'c') === 'abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-right-with-rest"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-from-right-with-rest">partial application from right with rest</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b, c) {
+  return a + b + c;
+};
+var p = f(..., 'c');
+return p('a', 'b') === 'abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-for-any-arg-with-rest"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-partial-application-for-any-arg-with-rest">partial application for any arg with rest</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b, c, d, e) {
+  return a + b + c + d + e;
+};
+var p = f(..., 'c', ...);
+return p('a', 'b') === 'abcab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-mixed-partial-application"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-mixed-partial-application">mixed partial application</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b, c, d) {
+  return a + b + c;
+};
+var p = f(?, 'b', ...);
+return p('a', 'c', 'd') === 'abcd';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-runtime-evaluation"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-runtime-evaluation">runtime evaluation</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var f = function() {
+  throw new Error();
+};
+var p = f(?, 'b');
+f = function(a, b) {
+  return a + b;
+};
+return p('a') === 'ab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-runtime-evaluation-of-property-access"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-runtime-evaluation-of-property-access">runtime evaluation of property access</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var o = {};
+var p = o.f(?, 'b');
+o = { x: 'c', f: function(a, b) {
+  return a + b + this.x;
+} };
+return p('a') === 'abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-lexical--this-"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-lexical--this-">lexical `this`</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function f(a, b) {
+  return a + b + (this === o);
+}
+var o = { f: f(?, 'b') };
+return o.f('a') === 'abfalse';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-constructor-partial-application"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-constructor-partial-application">constructor partial application</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function F(a, b) {
+  this.x = a + b;
+}
+var p = new F(?, 'b');
+return p('a').x === 'ab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--partial-application-syntax-constructor-partial-application-with-rest"></div><a href="#ESNEXT-proposal--stage-1--partial-application-syntax-constructor-partial-application-with-rest">constructor partial application with rest</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function F(a, b, c) {
+  this.x = a + b + c;
+}
+var p = new F('a', ...);
+return p('b', 'c').x === 'abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
+          <td class="result"></td>
+        </tr>
       </table>
       <table class="results">
         <caption>
@@ -16180,209 +16383,6 @@ return fuz.bar === 42 &amp;&amp; fuz.baz === 33;</div>}
           </td>
           <td class="result"><div class="Error" title="Unexpected token .">Error</div></td>
           <td class="result"><div class="Error" title="Expected &#x27;:&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax">partial application syntax</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-left"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-left">partial application from left</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b) {
-  return a + b;
-};
-var p = f('a', ?);
-return p('b') === 'ab';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-right"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-right">partial application from right</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b) {
-  return a + b;
-};
-var p = f(?, 'b');
-return p('a') === 'ab';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-for-any-arg"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-for-any-arg">partial application for any arg</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b, c) {
-  return a + b + c;
-};
-var p = f(?, 'b', ?);
-return p('a', 'c') === 'abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-left-with-rest"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-left-with-rest">partial application from left with rest</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b, c) {
-  return a + b + c;
-};
-var p = f('a', ...);
-return p('b', 'c') === 'abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-right-with-rest"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-from-right-with-rest">partial application from right with rest</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b, c) {
-  return a + b + c;
-};
-var p = f(..., 'c');
-return p('a', 'b') === 'abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-for-any-arg-with-rest"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-partial-application-for-any-arg-with-rest">partial application for any arg with rest</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b, c, d, e) {
-  return a + b + c + d + e;
-};
-var p = f(..., 'c', ...);
-return p('a', 'b') === 'abcab';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-mixed-partial-application"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-mixed-partial-application">mixed partial application</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b, c, d) {
-  return a + b + c;
-};
-var p = f(?, 'b', ...);
-return p('a', 'c', 'd') === 'abcd';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-runtime-evaluation"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-runtime-evaluation">runtime evaluation</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var f = function() {
-  throw new Error();
-};
-var p = f(?, 'b');
-f = function(a, b) {
-  return a + b;
-};
-return p('a') === 'ab';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-runtime-evaluation-of-property-access"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-runtime-evaluation-of-property-access">runtime evaluation of property access</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var o = {};
-var p = o.f(?, 'b');
-o = { x: 'c', f: function(a, b) {
-  return a + b + this.x;
-} };
-return p('a') === 'abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-lexical--this-"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-lexical--this-">lexical `this`</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function f(a, b) {
-  return a + b + (this === o);
-}
-var o = { f: f(?, 'b') };
-return o.f('a') === 'abfalse';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-constructor-partial-application"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-constructor-partial-application">constructor partial application</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function F(a, b) {
-  this.x = a + b;
-}
-var p = new F(?, 'b');
-return p('a').x === 'ab';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-strawman--stage-0--partial-application-syntax-constructor-partial-application-with-rest"></div><a href="#ESNEXT-strawman--stage-0--partial-application-syntax-constructor-partial-application-with-rest">constructor partial application with rest</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function F(a, b, c) {
-  this.x = a + b + c;
-}
-var p = new F('a', ...);
-return p('b', 'c').x === 'abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
-          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
       </table>
       <table class="results">
