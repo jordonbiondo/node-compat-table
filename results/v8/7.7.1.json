@@ -3,8 +3,8 @@
   "_engine": "v8 5.5.372.41",
   "ESNEXT": {
     "_successful": 7,
-    "_count": 181,
-    "_percent": 0.03867403314917127,
+    "_count": 182,
+    "_percent": 0.038461538461538464,
     "candidate (stage 3)›object rest/spread properties›object rest properties": "Unexpected token ...",
     "candidate (stage 3)›object rest/spread properties›object spread properties": "Unexpected token ...",
     "candidate (stage 3)›global›\"global\" global property is global object": true,
@@ -155,6 +155,7 @@
     "proposal (stage 1)›partial application syntax›lexical `this`": "Unexpected token ?",
     "proposal (stage 1)›partial application syntax›constructor partial application": "Unexpected token ?",
     "proposal (stage 1)›partial application syntax›constructor partial application with rest": "Unexpected token )",
+    "proposal (stage 1)›Symbol.prototype.description": false,
     "strawman (stage 0)›bind (::) operator›binary form": "Unexpected token :",
     "strawman (stage 0)›bind (::) operator›unary form": "Unexpected token :",
     "strawman (stage 0)›String.prototype.at": "\"a𠮷b\".at is not a function",

@@ -918,6 +918,7 @@
     "proposal (stage 1)›partial application syntax›lexical `this`": "function f(a, b) {\n  return a + b + (this === o);\n}\nvar o = { f: f(?, 'b') };\nreturn o.f('a') === 'abfalse';",
     "proposal (stage 1)›partial application syntax›constructor partial application": "function F(a, b) {\n  this.x = a + b;\n}\nvar p = new F(?, 'b');\nreturn p('a').x === 'ab';",
     "proposal (stage 1)›partial application syntax›constructor partial application with rest": "function F(a, b, c) {\n  this.x = a + b + c;\n}\nvar p = new F('a', ...);\nreturn p('b', 'c').x === 'abc';",
+    "proposal (stage 1)›Symbol.prototype.description": "return Symbol('foo').description === 'foo';",
     "strawman (stage 0)›bind (::) operator›binary form": "function foo() { this.garply += \"foo\"; return this; }\nvar obj = { garply: \"bar\" };\nreturn typeof obj::foo === \"function\" && obj::foo().garply === \"barfoo\";",
     "strawman (stage 0)›bind (::) operator›unary form": "var obj = { garply: \"bar\", foo: function() { this.garply += \"foo\"; return this; } };\nreturn typeof ::obj.foo === \"function\" && ::obj.foo().garply === \"barfoo\";",
     "strawman (stage 0)›String.prototype.at": "return 'a𠮷b'.at(1) === '𠮷';",

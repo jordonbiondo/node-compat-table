@@ -13029,7 +13029,7 @@ return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
             </div>
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -14504,6 +14504,18 @@ return 123i === 'string123number123';</div>}
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---Symbol-prototype-description"></div><a href="#ESNEXT-proposal--stage-1---Symbol-prototype-description">Symbol.prototype.description</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Symbol('foo').description === 'foo';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-proposal--stage-1--SIMD--Single-Instruction--Multiple-Data-"></div><a href="#ESNEXT-proposal--stage-1--SIMD--Single-Instruction--Multiple-Data-">SIMD (Single Instruction, Multiple Data)</a>
@@ -15824,7 +15836,7 @@ return p('b') === 'ab';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15840,7 +15852,7 @@ return p('a') === 'ab';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15856,7 +15868,7 @@ return p('a', 'c') === 'abc';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15872,7 +15884,7 @@ return p('b', 'c') === 'abc';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15888,7 +15900,7 @@ return p('a', 'b') === 'abc';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15904,7 +15916,7 @@ return p('a', 'b') === 'abcab';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ,">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15920,7 +15932,7 @@ return p('a', 'c', 'd') === 'abcd';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15939,7 +15951,7 @@ return p('a') === 'ab';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15956,7 +15968,7 @@ return p('a') === 'abc';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15972,7 +15984,7 @@ return o.f('a') === 'abfalse';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15988,7 +16000,7 @@ return p('a').x === 'ab';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -16004,7 +16016,7 @@ return p('b', 'c').x === 'abc';</div>}
             </div>
           </td>
           <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
-          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
       </table>
       <table class="results">
