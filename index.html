@@ -26168,6 +26168,30 @@ return regexGreekSymbol.test('π');</div>}
           <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3---numeric-separators"></div><a href="#ESNEXT-candidate--stage-3---numeric-separators">numeric separators</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="14">
             <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--class-fields"></div><a href="#ESNEXT-candidate--stage-3--class-fields">class fields</a>
@@ -26581,6 +26605,61 @@ function check() {
         <tr>
           <td class="feature sub" colspan="14">
             <h3>
+              <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten">Array.prototype.flatten</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object 1,2,3,4,5,6 has no method &#x27;flatten&#x27;">Error</div><div class="Error flagged " title="Object 1,2,3,4,5,6 has no method &#x27;flatten&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
+  return [it.a, it.b];
+}).join('') === '1234';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object [object Object],[object Object] has no method &#x27;flatMap&#x27;">Error</div><div class="Error flagged " title="Object [object Object],[object Object] has no method &#x27;flatMap&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="14">
+            <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding">optional catch binding</a>
             </h3>
           </td>
@@ -26754,30 +26833,6 @@ return a === '1a2b'
           <td class="result"><div class="Error unflagged " title="&quot;11a2bb&quot;.matchAll is not a function">Error</div><div class="Error flagged " title="&quot;11a2bb&quot;.matchAll is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object 11a2bb has no method &#x27;matchAll&#x27;">Error</div><div class="Error flagged " title="Object 11a2bb has no method &#x27;matchAll&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2---numeric-separators"></div><a href="#ESNEXT-draft--stage-2---numeric-separators">numeric separators</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid or unexpected token">Error</div><div class="Error flagged " title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="14">
@@ -27011,61 +27066,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
  has no method &#x27;trimEnd&#x27;">Error</div><div class="Error flagged " title="Object  	 
  abc   	
  has no method &#x27;trimEnd&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="14">
-            <h3>
-              <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatten"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatten">Array.prototype.flatten</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div><div class="Error flagged " title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Object 1,2,3,4,5,6 has no method &#x27;flatten&#x27;">Error</div><div class="Error flagged " title="Object 1,2,3,4,5,6 has no method &#x27;flatten&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
-  return [it.a, it.b];
-}).join('') === '1234';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div><div class="Error flagged " title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div><div class="Error flagged " title="[(intermediate value)(intermediate value),(intermediate value)(intermediate value)].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Object [object Object],[object Object] has no method &#x27;flatMap&#x27;">Error</div><div class="Error flagged " title="Object [object Object],[object Object] has no method &#x27;flatMap&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="14">

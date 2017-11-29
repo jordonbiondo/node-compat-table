@@ -13757,6 +13757,19 @@ return regexGreekSymbol.test('π');</div>}
           <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3---numeric-separators"></div><a href="#ESNEXT-candidate--stage-3---numeric-separators">numeric separators</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Expected &#x27;;&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--class-fields"></div><a href="#ESNEXT-candidate--stage-3--class-fields">class fields</a>
@@ -14027,6 +14040,39 @@ function check() {
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
+              <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten">Array.prototype.flatten</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatten&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
+  return [it.a, it.b];
+}).join('') === '1234';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatMap&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding">optional catch binding</a>
             </h3>
           </td>
@@ -14147,19 +14193,6 @@ return a === '1a2b'
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;matchAll&#x27;">Error</div></td>
         </tr>
         <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2---numeric-separators"></div><a href="#ESNEXT-draft--stage-2---numeric-separators">numeric separators</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error" title="Expected &#x27;;&#x27;">Error</div></td>
-        </tr>
-        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-draft--stage-2--Class-and-Property-Decorators"></div><a href="#ESNEXT-draft--stage-2--Class-and-Property-Decorators">Class and Property Decorators</a>
@@ -14244,39 +14277,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
  abc   	
 &quot;.trimEnd is not a function">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimEnd&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatten"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatten">Array.prototype.flatten</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatten&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-draft--stage-2--Array-prototype--flatten--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
-  return [it.a, it.b];
-}).join('') === '1234';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatMap&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
