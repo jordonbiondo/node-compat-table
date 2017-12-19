@@ -13526,6 +13526,19 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
           <td class="result"><div class="Error" title="Octal numeric literals and escape characters not allowed in strict mode">Error</div></td>
         </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features--s--dotAll--flag-for-regular-expressions"></div><a href="#ES2018-features--s--dotAll--flag-for-regular-expressions">s (dotAll) flag for regular expressions</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const regex = /foo.bar/s;
+return regex.test('foo\nbar');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Syntax error in regular expression">Error</div></td>
+        </tr>
       </table>
     </article>
     <article id="ESNEXT">
@@ -13716,19 +13729,6 @@ return result.groups.year === '2016'
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
           <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---s--dotAll--flag-for-regular-expressions"></div><a href="#ESNEXT-candidate--stage-3---s--dotAll--flag-for-regular-expressions">s (dotAll) flag for regular expressions</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const regex = /foo.bar/s;
-return regex.test('foo\nbar');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Syntax error in regular expression">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">

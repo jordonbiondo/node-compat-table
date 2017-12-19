@@ -3,8 +3,8 @@
   "_engine": "v8 5.1.281.102",
   "ESNEXT": {
     "_successful": 8,
-    "_count": 182,
-    "_percent": 0.04395604395604396,
+    "_count": 181,
+    "_percent": 0.04419889502762431,
     "candidate (stage 3)›object rest/spread properties›object rest properties": "Unexpected token ...",
     "candidate (stage 3)›object rest/spread properties›object spread properties": "Unexpected token ...",
     "candidate (stage 3)›global›\"global\" global property is global object": true,
@@ -12,7 +12,6 @@
     "candidate (stage 3)›Asynchronous Iterators›async generators": "Unexpected token function",
     "candidate (stage 3)›Asynchronous Iterators›for-await-of loops": "Unexpected token function",
     "candidate (stage 3)›RegExp named capture groups": "Invalid regular expression: /(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})/: Invalid group",
-    "candidate (stage 3)›s (dotAll) flag for regular expressions": "Invalid regular expression flags",
     "candidate (stage 3)›RegExp Lookbehind Assertions": true,
     "candidate (stage 3)›RegExp Unicode Property Escapes": "Invalid regular expression: /\\p{Script=Greek}/: Invalid escape",
     "candidate (stage 3)›class fields›class properties": "Unexpected token =",
@@ -190,9 +189,10 @@
   },
   "ES2018": {
     "_successful": 0,
-    "_count": 1,
+    "_count": 2,
     "_percent": 0,
-    "features›template literal revision": "Invalid hexadecimal escape sequence"
+    "features›template literal revision": "Invalid hexadecimal escape sequence",
+    "features›s (dotAll) flag for regular expressions": "Invalid regular expression flags"
   },
   "ES2017": {
     "_successful": 15,

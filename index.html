@@ -24479,7 +24479,7 @@ return i === 0;</div>}
                       <td>v8 5.8.283.41</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">100% complete</sub><sub class="unflagged">0% complete</sub>
+                </div><sub class="flagged">50% complete</sub><sub class="unflagged">0% complete</sub>
               </th>
               <th class="version v7">7.10.1
                 <div class="details"><small>(these versions have identical results)</small>
@@ -25207,6 +25207,30 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
           <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
         </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features--s--dotAll--flag-for-regular-expressions"></div><a href="#ES2018-features--s--dotAll--flag-for-regular-expressions">s (dotAll) flag for regular expressions</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const regex = /foo.bar/s;
+return regex.test('foo\nbar');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
+        </tr>
       </table>
     </article>
     <article id="ESNEXT">
@@ -25256,7 +25280,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.2.414.32-node.8</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">9% complete</sub><sub class="unflagged">6% complete</sub>
+                </div><sub class="flagged">9% complete</sub><sub class="unflagged">5% complete</sub>
               </th>
               <th class="version v8">8.9.3
                 <div class="details"><small>(these versions have identical results)</small>
@@ -26304,30 +26328,6 @@ return result.groups.year === '2016'
           <td class="result"><div class="Error unflagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div><div class="Error flagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div><div class="Error flagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div><div class="Error flagged " title="Invalid regular expression: &#x2F;(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})&#x2F;: Invalid group">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---s--dotAll--flag-for-regular-expressions"></div><a href="#ESNEXT-candidate--stage-3---s--dotAll--flag-for-regular-expressions">s (dotAll) flag for regular expressions</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const regex = /foo.bar/s;
-return regex.test('foo\nbar');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;s&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
