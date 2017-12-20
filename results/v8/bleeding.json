@@ -2,9 +2,9 @@
   "_version": "9.0.0-v8-build-363d04fc37e5a7f5af4cc90aa9c7f83d8f1b0f5d",
   "_engine": "v8 6.4.0 (candidate)",
   "ESNEXT": {
-    "_successful": 17,
-    "_count": 182,
-    "_percent": 0.09340659340659341,
+    "_successful": 16,
+    "_count": 181,
+    "_percent": 0.08839779005524862,
     "candidate (stage 3)›object rest/spread properties›object rest properties": true,
     "candidate (stage 3)›object rest/spread properties›object spread properties": true,
     "candidate (stage 3)›global›\"global\" global property is global object": true,
@@ -12,7 +12,6 @@
     "candidate (stage 3)›Asynchronous Iterators›async generators": true,
     "candidate (stage 3)›Asynchronous Iterators›for-await-of loops": true,
     "candidate (stage 3)›RegExp named capture groups": true,
-    "candidate (stage 3)›s (dotAll) flag for regular expressions": true,
     "candidate (stage 3)›RegExp Lookbehind Assertions": true,
     "candidate (stage 3)›RegExp Unicode Property Escapes": "Invalid regular expression: /\\p{Script=Greek}/: Invalid escape",
     "candidate (stage 3)›class fields›class properties": "Unexpected token =",
@@ -189,10 +188,11 @@
     "pre-strawman›Metadata reflection API›Reflect.metadata": false
   },
   "ES2018": {
-    "_successful": 1,
-    "_count": 1,
+    "_successful": 2,
+    "_count": 2,
     "_percent": 1,
-    "features›template literal revision": true
+    "features›template literal revision": true,
+    "features›s (dotAll) flag for regular expressions": true
   },
   "ES2017": {
     "_successful": 64,
