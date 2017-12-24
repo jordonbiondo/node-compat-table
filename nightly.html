@@ -15371,19 +15371,6 @@ return nonCallableCheckPassed &amp;&amp; primitiveCheckPassed &amp;&amp; newChec
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1--Observable-Observable-prototype-forEach"></div><a href="#ESNEXT-proposal--stage-1--Observable-Observable-prototype-forEach">Observable.prototype.forEach</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var o = new Observable(function() { });
-return 'forEach' in Observable.prototype &amp;&amp; o.forEach(function(e){return true}) instanceof Promise;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Observable is not defined">Error</div></td>
-          <td class="result"><div class="Error" title="&#x27;Observable&#x27; is not defined">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
             <div class="hash" id="ESNEXT-proposal--stage-1--Observable-Observable-prototype-Symbol-observable-"></div><a href="#ESNEXT-proposal--stage-1--Observable-Observable-prototype-Symbol-observable-">Observable.prototype[Symbol.observable]</a>
             <div class="info">?
               <div class="fn">function(){
@@ -16017,6 +16004,143 @@ return p('b', 'c').x === 'abc';</div>}
           </td>
           <td class="result"><div class="Error" title="Unexpected token )">Error</div></td>
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax">Object.freeze and Object.seal syntax</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-freeze-syntax"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-freeze-syntax">Object.freeze syntax</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Object.isFrozen({# foo: 42 #});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-freeze-syntax-with-array-literal"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-freeze-syntax-with-array-literal">Object.freeze syntax with array literal</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Object.isFrozen([# 42 #]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-seal-syntax"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-seal-syntax">Object.seal syntax</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Object.isSealed({| foo: 42 |});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token |">Error</div></td>
+          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-seal-syntax-with-array-literal"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Object-seal-syntax-with-array-literal">Object.seal syntax with array literal</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Object.isSealed([| 42 |]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token |">Error</div></td>
+          <td class="result"><div class="Error" title="Syntax error">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Sealing--function-destructuring"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Sealing--function-destructuring">Sealing, function destructuring</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function foo({| bar, baz |}) {
+  return bar + baz;
+}
+if (foo({ bar: 1, baz: 2 }) !== 3) return;
+try {
+  foo({ bar: 1, fuz: 2 });
+} catch (e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token |">Error</div></td>
+          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Freezing--function-destructuring"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Freezing--function-destructuring">Freezing, function destructuring</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function foo({# bar, baz #}) {
+  if (baz === 42) bar = 27;
+  return bar + baz;
+}
+if (foo({ bar: 1, baz: 2 }) !== 3) return;
+try {
+  foo({ bar: 1, baz: 42 });
+} catch (e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Sealing--function-arguments"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Sealing--function-arguments">Sealing, function arguments</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function foo(| bar, baz |) {
+  return bar + baz;
+}
+if (foo(1, 2) !== 3) return;
+try {
+  foo(1, 2, 3);
+} catch (e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Unexpected token |">Error</div></td>
+          <td class="result"><div class="Error" title="Expected identifier">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Freezing--function-arguments"></div><a href="#ESNEXT-proposal--stage-1--Object-freeze-and-Object-seal-syntax-Freezing--function-arguments">Freezing, function arguments</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function foo(# bar, baz #) {
+  if (baz === 42) bar = 27;
+  return bar + baz;
+}
+if (foo(1, 2) !== 3) return;
+try {
+  foo(1, 42);
+} catch (e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
         </tr>
       </table>
       <table class="results">
