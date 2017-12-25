@@ -14516,6 +14516,35 @@ return 123i === 'string123number123';</div>}
           <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---String-prototype-replaceAll"></div><a href="#ESNEXT-proposal--stage-1---String-prototype-replaceAll">String.prototype.replaceAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;replaceAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---String-prototype-codePoints"></div><a href="#ESNEXT-proposal--stage-1---String-prototype-codePoints">String.prototype.codePoints</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var results = [];
+for (let code of 'a𠮷b'.codePoints()) results.push(code);
+return results.length === 3
+  &amp;&amp; results[0] === 97
+  &amp;&amp; results[1] === 134071
+  &amp;&amp; results[2] === 98;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;codePoints&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-proposal--stage-1--SIMD--Single-Instruction--Multiple-Data-"></div><a href="#ESNEXT-proposal--stage-1--SIMD--Single-Instruction--Multiple-Data-">SIMD (Single Instruction, Multiple Data)</a>

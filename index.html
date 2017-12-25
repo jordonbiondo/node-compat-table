@@ -25280,7 +25280,7 @@ return regex.test('foo\nbar');</div>}
                       <td>v8 6.2.414.32-node.8</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">9% complete</sub><sub class="unflagged">5% complete</sub>
+                </div><sub class="flagged">8% complete</sub><sub class="unflagged">5% complete</sub>
               </th>
               <th class="version v8">8.9.3
                 <div class="details"><small>(these versions have identical results)</small>
@@ -27656,6 +27656,57 @@ return 123i === 'string123number123';</div>}
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---String-prototype-replaceAll"></div><a href="#ESNEXT-proposal--stage-1---String-prototype-replaceAll">String.prototype.replaceAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 'q=query+string+parameters'.replaceAll('+', ' ') === 'q=query string parameters';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div><div class="Error flagged " title="&quot;q=query+string+parameters&quot;.replaceAll is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object q=query+string+parameters has no method &#x27;replaceAll&#x27;">Error</div><div class="Error flagged " title="Object q=query+string+parameters has no method &#x27;replaceAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---String-prototype-codePoints"></div><a href="#ESNEXT-proposal--stage-1---String-prototype-codePoints">String.prototype.codePoints</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var results = [];
+for (let code of 'a𠮷b'.codePoints()) results.push(code);
+return results.length === 3
+  &amp;&amp; results[0] === 97
+  &amp;&amp; results[1] === 134071
+  &amp;&amp; results[2] === 98;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...) is not iterable">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...) is not iterable">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints is not a function">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div><div class="Error flagged " title="&quot;a𠮷b&quot;.codePoints(...)[Symbol.iterator] is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;að ®·b&quot;.codePoints is not a function">Error</div><div class="Error flagged " title="&quot;að ®·b&quot;.codePoints is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;að ®·b&quot;.codePoints is not a function">Error</div><div class="Error flagged " title="&quot;að ®·b&quot;.codePoints is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;aB·b&quot;.codePoints is not a function">Error</div><div class="Error flagged " title="&quot;aB·b&quot;.codePoints is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="&quot;aB·b&quot;.codePoints is not a function">Error</div><div class="Error flagged " title="&quot;aB·b&quot;.codePoints is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="14">
