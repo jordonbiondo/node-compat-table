@@ -1,6 +1,6 @@
 {
-  "_version": "10.0.0-nightly2018011334a05e7439",
-  "_engine": "chakracore 1.7.1.0",
+  "_version": "10.0.0-nightly20180117985faa1cf1",
+  "_engine": "chakracore 1.9.1.0",
   "ESNEXT": {
     "_successful": 6,
     "_count": 192,
@@ -32,7 +32,7 @@
     "candidate (stage 3)›optional catch binding›basic": "Expected '('",
     "candidate (stage 3)›optional catch binding›await": "Expected '('",
     "candidate (stage 3)›optional catch binding›yield": "Expected '('",
-    "candidate (stage 3)›numeric separators": "Expected ';'",
+    "candidate (stage 3)›numeric separators": "Unexpected identifier after numeric literal",
     "draft (stage 2)›Generator function.sent Meta Property": "Expected '('",
     "draft (stage 2)›Class and Property Decorators›class decorators": "Invalid character",
     "draft (stage 2)›string trimming›String.prototype.trimLeft": true,
@@ -138,7 +138,7 @@
     "proposal (stage 1)›`.of` and `.from` on collection constructors›WeakSet.of": "Object doesn't support property or method 'of'",
     "proposal (stage 1)›`.of` and `.from` on collection constructors›WeakSet.from": "Object doesn't support property or method 'from'",
     "proposal (stage 1)›the pipeline operator": "Syntax error",
-    "proposal (stage 1)›extensible numeric literals": "Expected ';'",
+    "proposal (stage 1)›extensible numeric literals": "Unexpected identifier after numeric literal",
     "proposal (stage 1)›optional chaining operator (?.)›optional property access": "Syntax error",
     "proposal (stage 1)›optional chaining operator (?.)›optional bracket access": "Syntax error",
     "proposal (stage 1)›optional chaining operator (?.)›optional method call": "Syntax error",
