@@ -13503,6 +13503,147 @@ return i === 0;</div>}
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
+              <div class="hash" id="ES2018-features-object-rest-spread-properties"></div><a href="#ES2018-features-object-rest-spread-properties">object rest/spread properties</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features-object-rest-spread-properties-object-rest-properties"></div><a href="#ES2018-features-object-rest-spread-properties-object-rest-properties">object rest properties</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var {a, ...rest} = {a: 1, b: 2, c: 3};
+return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp; rest.c === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features-object-rest-spread-properties-object-spread-properties"></div><a href="#ES2018-features-object-rest-spread-properties-object-spread-properties">object spread properties</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var spread = {b: 2, c: 3};
+var O = {a: 1, ...spread};
+return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2018-features-Promise-prototype-finally"></div><a href="#ES2018-features-Promise-prototype-finally">Promise.prototype.finally</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features-Promise-prototype-finally-basic-support"></div><a href="#ES2018-features-Promise-prototype-finally-basic-support">basic support</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var p1 = Promise.resolve(&quot;foo&quot;);
+var p2 = Promise.reject(&quot;bar&quot;);
+var score = 0;
+function thenFn(result)  {
+  score += (result === &quot;foo&quot;);
+  check();
+}
+function catchFn(result) {
+  score += (result === &quot;bar&quot;);
+  check();
+}
+function finallyFn() {
+  score += (arguments.length === 0);
+  check();
+}
+p1.then(thenFn);
+p1.finally(finallyFn);
+p1.finally(function() {
+  // should return a new Promise
+  score += p1.finally() !== p1;
+  check();
+});
+p2.catch(catchFn);
+p2.finally(finallyFn);
+function check() {
+  if (score === 5) asyncTestPassed();
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features-Promise-prototype-finally-don-t-change-resolution-value"></div><a href="#ES2018-features-Promise-prototype-finally-don-t-change-resolution-value">don't change resolution value</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+function thenFn(result)  {
+  score += (result === &quot;foo&quot;);
+  check();
+}
+function catchFn(result) {
+  score += (result === &quot;bar&quot;);
+  check();
+}
+function finallyFn() {
+  score++;
+  check();
+  return Promise.resolve(&quot;foobar&quot;);
+}
+Promise.resolve(&quot;foo&quot;).finally(finallyFn).then(thenFn);
+Promise.reject(&quot;bar&quot;).finally(finallyFn).catch(catchFn);
+function check() {
+  if (score === 4) asyncTestPassed();
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features-Promise-prototype-finally-change-rejection-value"></div><a href="#ES2018-features-Promise-prototype-finally-change-rejection-value">change rejection value</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var score = 0;
+Promise
+  .reject(&quot;foobar&quot;)
+  .finally(function() {
+    return Promise.reject(&quot;foo&quot;);
+  })
+  .catch(function(result) {
+    score += (result === &quot;foo&quot;);
+    check();
+    return Promise.reject(&quot;foobar&quot;);
+  })
+  .finally(function() {
+    throw new Error('bar');
+  })
+  .catch(function(result) {
+    score += (result.message === &quot;bar&quot;);
+    check();
+  });
+function check() {
+  if (score === 2) asyncTestPassed();
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
               <div class="hash" id="ES2018-features-"></div><a href="#ES2018-features-"></a>
             </h3>
           </td>
@@ -13538,6 +13679,51 @@ return regex.test('foo\nbar');</div>}
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
           <td class="result"><div class="Error" title="Syntax error in regular expression">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features--RegExp-named-capture-groups"></div><a href="#ES2018-features--RegExp-named-capture-groups">RegExp named capture groups</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec('2016-03-11');
+return result.groups.year === '2016'
+  &amp;&amp; result.groups.month === '03'
+  &amp;&amp; result.groups.day === '11'
+  &amp;&amp; result[0] === '2016-03-11'
+  &amp;&amp; result[1] === '2016'
+  &amp;&amp; result[2] === '03'
+  &amp;&amp; result[3] === '11';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features--RegExp-Lookbehind-Assertions"></div><a href="#ES2018-features--RegExp-Lookbehind-Assertions">RegExp Lookbehind Assertions</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return /(?&lt;=a)b/.test('ab') &amp;&amp; /(?&lt;!a)b/.test('cb') &amp;&amp;
+       !/(?&lt;=a)b/.test('b');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-features--RegExp-Unicode-Property-Escapes"></div><a href="#ES2018-features--RegExp-Unicode-Property-Escapes">RegExp Unicode Property Escapes</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const regexGreekSymbol = /\p{Script=Greek}/u;
+return regexGreekSymbol.test('π');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
       </table>
     </article>
@@ -13578,36 +13764,57 @@ return regex.test('foo\nbar');</div>}
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--object-rest-spread-properties"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties">object rest/spread properties</a>
+              <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming"></div><a href="#ESNEXT-candidate--stage-3--string-trimming">string trimming</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--object-rest-spread-properties-object-rest-properties"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties-object-rest-properties">object rest properties</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimLeft"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimLeft">String.prototype.trimLeft</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">var {a, ...rest} = {a: 1, b: 2, c: 3};
-return a === 1 &amp;&amp; rest.a === undefined &amp;&amp; rest.b === 2 &amp;&amp; rest.c === 3;</div>}
+                <div class="code">return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';</div>}
               </div>
             </div>
           </td>
+          <td class="result"></td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--object-rest-spread-properties-object-spread-properties"></div><a href="#ESNEXT-candidate--stage-3--object-rest-spread-properties-object-spread-properties">object spread properties</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimRight"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimRight">String.prototype.trimRight</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">var spread = {b: 2, c: 3};
-var O = {a: 1, ...spread};
-return O !== spread &amp;&amp; (O.a + O.b + O.c) === 6;</div>}
+                <div class="code">return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';</div>}
               </div>
             </div>
           </td>
+          <td class="result"></td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Expected identifier, string or number">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimStart"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimStart">String.prototype.trimStart</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimStart&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimEnd"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimEnd">String.prototype.trimEnd</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimEnd&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -13648,6 +13855,48 @@ return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;
           </td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-candidate--stage-3--"></div><a href="#ESNEXT-candidate--stage-3--"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3---String-prototype-matchAll"></div><a href="#ESNEXT-candidate--stage-3---String-prototype-matchAll">String.prototype.matchAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
+if(iterator[Symbol.iterator]() !== iterator)return false;
+var a = '', b = '', c = '', step;
+while(!(step = iterator.next()).done){
+  a += step.value[0];
+  b += step.value[1];
+  c += step.value[2];
+}
+return a === '1a2b'
+  &amp;&amp; b === '12'
+  &amp;&amp; c === 'ab';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;matchAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3---numeric-separators"></div><a href="#ESNEXT-candidate--stage-3---numeric-separators">numeric separators</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
+          <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -13703,71 +13952,6 @@ asyncIterable[Symbol.asyncIterator] = function(){
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
           <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--"></div><a href="#ESNEXT-candidate--stage-3--"></a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---RegExp-named-capture-groups"></div><a href="#ESNEXT-candidate--stage-3---RegExp-named-capture-groups">RegExp named capture groups</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var result = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/.exec('2016-03-11');
-return result.groups.year === '2016'
-  &amp;&amp; result.groups.month === '03'
-  &amp;&amp; result.groups.day === '11'
-  &amp;&amp; result[0] === '2016-03-11'
-  &amp;&amp; result[1] === '2016'
-  &amp;&amp; result[2] === '03'
-  &amp;&amp; result[3] === '11';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---RegExp-Lookbehind-Assertions"></div><a href="#ESNEXT-candidate--stage-3---RegExp-Lookbehind-Assertions">RegExp Lookbehind Assertions</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return /(?&lt;=a)b/.test('ab') &amp;&amp; /(?&lt;!a)b/.test('cb') &amp;&amp;
-       !/(?&lt;=a)b/.test('b');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Unexpected quantifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes"></div><a href="#ESNEXT-candidate--stage-3---RegExp-Unicode-Property-Escapes">RegExp Unicode Property Escapes</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const regexGreekSymbol = /\p{Script=Greek}/u;
-return regexGreekSymbol.test('π');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid regular expression: &#x2F;\p{Script=Greek}&#x2F;: Invalid escape">Error</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---numeric-separators"></div><a href="#ESNEXT-candidate--stage-3---numeric-separators">numeric separators</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -13932,113 +14116,6 @@ return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === s
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--Promise-prototype-finally"></div><a href="#ESNEXT-candidate--stage-3--Promise-prototype-finally">Promise.prototype.finally</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Promise-prototype-finally-basic-support"></div><a href="#ESNEXT-candidate--stage-3--Promise-prototype-finally-basic-support">basic support</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var p1 = Promise.resolve(&quot;foo&quot;);
-var p2 = Promise.reject(&quot;bar&quot;);
-var score = 0;
-function thenFn(result)  {
-  score += (result === &quot;foo&quot;);
-  check();
-}
-function catchFn(result) {
-  score += (result === &quot;bar&quot;);
-  check();
-}
-function finallyFn() {
-  score += (arguments.length === 0);
-  check();
-}
-p1.then(thenFn);
-p1.finally(finallyFn);
-p1.finally(function() {
-  // should return a new Promise
-  score += p1.finally() !== p1;
-  check();
-});
-p2.catch(catchFn);
-p2.finally(finallyFn);
-function check() {
-  if (score === 5) asyncTestPassed();
-}</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Promise-prototype-finally-don-t-change-resolution-value"></div><a href="#ESNEXT-candidate--stage-3--Promise-prototype-finally-don-t-change-resolution-value">don't change resolution value</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var score = 0;
-function thenFn(result)  {
-  score += (result === &quot;foo&quot;);
-  check();
-}
-function catchFn(result) {
-  score += (result === &quot;bar&quot;);
-  check();
-}
-function finallyFn() {
-  score++;
-  check();
-  return Promise.resolve(&quot;foobar&quot;);
-}
-Promise.resolve(&quot;foo&quot;).finally(finallyFn).then(thenFn);
-Promise.reject(&quot;bar&quot;).finally(finallyFn).catch(catchFn);
-function check() {
-  if (score === 4) asyncTestPassed();
-}</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Promise-prototype-finally-change-rejection-value"></div><a href="#ESNEXT-candidate--stage-3--Promise-prototype-finally-change-rejection-value">change rejection value</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var score = 0;
-Promise
-  .reject(&quot;foobar&quot;)
-  .finally(function() {
-    return Promise.reject(&quot;foo&quot;);
-  })
-  .catch(function(result) {
-    score += (result === &quot;foo&quot;);
-    check();
-    return Promise.reject(&quot;foobar&quot;);
-  })
-  .finally(function() {
-    throw new Error('bar');
-  })
-  .catch(function(result) {
-    score += (result.message === &quot;bar&quot;);
-    check();
-  });
-function check() {
-  if (score === 2) asyncTestPassed();
-}</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;finally&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
             </h3>
           </td>
@@ -14171,25 +14248,15 @@ return result === 'tromple';</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2---String-prototype-matchAll"></div><a href="#ESNEXT-draft--stage-2---String-prototype-matchAll">String.prototype.matchAll</a>
+            <div class="hash" id="ESNEXT-draft--stage-2---Symbol-prototype-description"></div><a href="#ESNEXT-draft--stage-2---Symbol-prototype-description">Symbol.prototype.description</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">var iterator = '11a2bb'.matchAll(/(\d)(\D)/);
-if(iterator[Symbol.iterator]() !== iterator)return false;
-var a = '', b = '', c = '', step;
-while(!(step = iterator.next()).done){
-  a += step.value[0];
-  b += step.value[1];
-  c += step.value[2];
-}
-return a === '1a2b'
-  &amp;&amp; b === '12'
-  &amp;&amp; c === 'ab';</div>}
+                <div class="code">return Symbol('foo').description === 'foo';</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error" title="&quot;11a2bb&quot;.matchAll is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;matchAll&#x27;">Error</div></td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14217,65 +14284,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
           </td>
           <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-draft--stage-2--string-trimming"></div><a href="#ESNEXT-draft--stage-2--string-trimming">string trimming</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--string-trimming-String-prototype-trimLeft"></div><a href="#ESNEXT-draft--stage-2--string-trimming-String-prototype-trimLeft">String.prototype.trimLeft</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--string-trimming-String-prototype-trimRight"></div><a href="#ESNEXT-draft--stage-2--string-trimming-String-prototype-trimRight">String.prototype.trimRight</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--string-trimming-String-prototype-trimStart"></div><a href="#ESNEXT-draft--stage-2--string-trimming-String-prototype-trimStart">String.prototype.trimStart</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="&quot; 	 
- abc   	
-&quot;.trimStart is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimStart&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--string-trimming-String-prototype-trimEnd"></div><a href="#ESNEXT-draft--stage-2--string-trimming-String-prototype-trimEnd">String.prototype.trimEnd</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="&quot; 	 
- abc   	
-&quot;.trimEnd is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimEnd&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14541,18 +14549,6 @@ return 123i === 'string123number123';</div>}
           </td>
           <td class="result"><div class="Error" title="Unexpected token ?">Error</div></td>
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---Symbol-prototype-description"></div><a href="#ESNEXT-proposal--stage-1---Symbol-prototype-description">Symbol.prototype.description</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Symbol('foo').description === 'foo';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
