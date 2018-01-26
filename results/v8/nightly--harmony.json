@@ -1,10 +1,10 @@
 {
-  "_version": "10.0.0-nightly201801242313424abc--harmony",
-  "_engine": "v8 6.3.292.48-node.6",
+  "_version": "10.0.0-nightly20180125c016cc2b17--harmony",
+  "_engine": "v8 6.4.388.40-node.3",
   "ESNEXT": {
-    "_successful": 12,
-    "_count": 184,
-    "_percent": 0.06521739130434782,
+    "_successful": 10,
+    "_count": 182,
+    "_percent": 0.054945054945054944,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": "\" \t \n abc   \t\n\".trimStart is not a function",
@@ -12,8 +12,6 @@
     "candidate (stage 3)›global›\"global\" global property is global object": true,
     "candidate (stage 3)›global›\"global\" global property has correct property descriptor": false,
     "candidate (stage 3)›String.prototype.matchAll": "\"11a2bb\".matchAll is not a function",
-    "candidate (stage 3)›Asynchronous Iterators›async generators": true,
-    "candidate (stage 3)›Asynchronous Iterators›for-await-of loops": true,
     "candidate (stage 3)›instance class fields›public instance class fields": "Unexpected token =",
     "candidate (stage 3)›instance class fields›private instance class fields basic support": "Invalid or unexpected token",
     "candidate (stage 3)›instance class fields›private instance class fields initializers": "Invalid or unexpected token",
@@ -191,8 +189,8 @@
     "pre-strawman›Metadata reflection API›Reflect.metadata": false
   },
   "ES2018": {
-    "_successful": 10,
-    "_count": 10,
+    "_successful": 12,
+    "_count": 12,
     "_percent": 1,
     "features›object rest/spread properties›object rest properties": true,
     "features›object rest/spread properties›object spread properties": true,
@@ -203,7 +201,9 @@
     "features›s (dotAll) flag for regular expressions": true,
     "features›RegExp named capture groups": true,
     "features›RegExp Lookbehind Assertions": true,
-    "features›RegExp Unicode Property Escapes": true
+    "features›RegExp Unicode Property Escapes": true,
+    "features›Asynchronous Iterators›async generators": true,
+    "features›Asynchronous Iterators›for-await-of loops": true
   },
   "ES2017": {
     "_successful": 64,

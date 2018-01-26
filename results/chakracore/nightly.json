@@ -3,8 +3,8 @@
   "_engine": "chakracore 1.9.1.0",
   "ESNEXT": {
     "_successful": 6,
-    "_count": 184,
-    "_percent": 0.03260869565217391,
+    "_count": 182,
+    "_percent": 0.03296703296703297,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": "Object doesn't support property or method 'trimStart'",
@@ -12,8 +12,6 @@
     "candidate (stage 3)›global›\"global\" global property is global object": false,
     "candidate (stage 3)›global›\"global\" global property has correct property descriptor": false,
     "candidate (stage 3)›String.prototype.matchAll": "Object doesn't support property or method 'matchAll'",
-    "candidate (stage 3)›Asynchronous Iterators›async generators": "Syntax error",
-    "candidate (stage 3)›Asynchronous Iterators›for-await-of loops": "Expected '('",
     "candidate (stage 3)›instance class fields›public instance class fields": "Expected '('",
     "candidate (stage 3)›instance class fields›private instance class fields basic support": "Invalid character",
     "candidate (stage 3)›instance class fields›private instance class fields initializers": "Invalid character",
@@ -192,7 +190,7 @@
   },
   "ES2018": {
     "_successful": 0,
-    "_count": 10,
+    "_count": 12,
     "_percent": 0,
     "features›object rest/spread properties›object rest properties": "Expected identifier, string or number",
     "features›object rest/spread properties›object spread properties": "Expected identifier, string or number",
@@ -203,7 +201,9 @@
     "features›s (dotAll) flag for regular expressions": "Syntax error in regular expression",
     "features›RegExp named capture groups": "Unexpected quantifier",
     "features›RegExp Lookbehind Assertions": "Unexpected quantifier",
-    "features›RegExp Unicode Property Escapes": false
+    "features›RegExp Unicode Property Escapes": false,
+    "features›Asynchronous Iterators›async generators": "Syntax error",
+    "features›Asynchronous Iterators›for-await-of loops": "Expected '('"
   },
   "ES2017": {
     "_successful": 61,
