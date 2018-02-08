@@ -1,5 +1,5 @@
 {
-  "_version": "10.0.0-nightly20180203fb1b8d6878",
+  "_version": "10.0.0-nightly20180208d65786653a",
   "_engine": "chakracore 1.9.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -201,7 +201,7 @@
     "features›s (dotAll) flag for regular expressions": "Syntax error in regular expression",
     "features›RegExp named capture groups": "Unexpected quantifier",
     "features›RegExp Lookbehind Assertions": "Unexpected quantifier",
-    "features›RegExp Unicode Property Escapes": false,
+    "features›RegExp Unicode Property Escapes": "Invalid regular expression: invalid escape in unicode pattern",
     "features›Asynchronous Iterators›async generators": "Syntax error",
     "features›Asynchronous Iterators›for-await-of loops": "Expected '('"
   },
