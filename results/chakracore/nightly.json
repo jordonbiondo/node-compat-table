@@ -1,5 +1,5 @@
 {
-  "_version": "10.0.0-nightly201803213036f13a8c",
+  "_version": "10.0.0-nightly201803247cfa11f768",
   "_engine": "chakracore 1.9.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -30,6 +30,7 @@
     "candidate (stage 3)›numeric separators": "Unexpected identifier after numeric literal",
     "draft (stage 2)›Generator function.sent Meta Property": "Expected '('",
     "draft (stage 2)›Class and Property Decorators›class decorators": "Invalid character",
+    "draft (stage 2)›weak references": "'System' is not defined",
     "draft (stage 2)›static class fields›public static class fields": "Expected '('",
     "draft (stage 2)›static class fields›private static class fields": "Invalid character",
     "draft (stage 2)›throw expressions›logical": "Syntax error",
@@ -103,7 +104,6 @@
     "proposal (stage 1)›Observable›Observable.prototype[Symbol.observable]": "'Observable' is not defined",
     "proposal (stage 1)›Observable›Observable.of": "'Observable' is not defined",
     "proposal (stage 1)›Observable›Observable.from": "'Observable' is not defined",
-    "proposal (stage 1)›weak references": "'System' is not defined",
     "proposal (stage 1)›Frozen Realms API": "Unable to get property 'immutableRoot' of undefined or null reference",
     "proposal (stage 1)›Math.signbit": "Object doesn't support property or method 'signbit'",
     "proposal (stage 1)›Math extensions proposal›Math.clamp": "Object doesn't support property or method 'clamp'",

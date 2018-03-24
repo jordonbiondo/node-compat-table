@@ -27629,6 +27629,33 @@ return result === 'tromple';</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2---weak-references"></div><a href="#ESNEXT-draft--stage-2---weak-references">weak references</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var O = {};
+var weakref = System.makeWeakRef(O);
+var works = weakref.get() === O;
+weakref.clear();
+return works &amp;&amp; weakref.get() === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ESNEXT-draft--stage-2---Symbol-prototype-description"></div><a href="#ESNEXT-draft--stage-2---Symbol-prototype-description">Symbol.prototype.description</a>
             <div class="info">?
               <div class="fn">function(){
@@ -27940,33 +27967,6 @@ try {
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---weak-references"></div><a href="#ESNEXT-proposal--stage-1---weak-references">weak references</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var O = {};
-var weakref = System.makeWeakRef(O);
-var works = weakref.get() === O;
-weakref.clear();
-return works &amp;&amp; weakref.get() === undefined;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="System is not defined">Error</div><div class="Error flagged " title="System is not defined">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
