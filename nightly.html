@@ -13804,7 +13804,7 @@ asyncIterable[Symbol.asyncIterator] = function(){
                       <td>chakracore 1.9.1.0</td>
                     </tr>
                   </table>
-                </div><sup>Chakra</sup><sub class="unflagged">3% complete</sub>
+                </div><sup>Chakra</sup><sub class="unflagged">2% complete</sub>
               </th>
             </tr>
           </table>
@@ -14577,6 +14577,19 @@ return results.length === 3
           </td>
           <td class="result"><div class="Error" title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;codePoints&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---Object-fromEntries"></div><a href="#ESNEXT-proposal--stage-1---Object-fromEntries">Object.fromEntries</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -16204,6 +16217,330 @@ try {
           </td>
           <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1--getting-last-item-from-array"></div><a href="#ESNEXT-proposal--stage-1--getting-last-item-from-array">getting last item from array</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--getting-last-item-from-array-Array-prototype-lastItem"></div><a href="#ESNEXT-proposal--stage-1--getting-last-item-from-array-Array-prototype-lastItem">Array.prototype.lastItem</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, 2, 3].lastItem === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--getting-last-item-from-array-Array-prototype-lastIndex"></div><a href="#ESNEXT-proposal--stage-1--getting-last-item-from-array-Array-prototype-lastIndex">Array.prototype.lastIndex</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, 2, 3].lastIndex === 2;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods"></div><a href="#ESNEXT-proposal--stage-1--Set-methods">Set methods</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-intersect"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-intersect">Set.prototype.intersect</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
+return set.size === 2
+  &amp;&amp; set.has(2)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;intersect&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-union"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-union">Set.prototype.union</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2]).union(new Set([2, 3]));
+return set.size === 3
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(2)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;union&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-except"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-except">Set.prototype.except</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).except(new Set([3, 4]));
+return set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(2);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;except&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-xor"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-xor">Set.prototype.xor</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2]).xor(new Set([2, 3]));
+return set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;xor&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods">Collections methods</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-groupBy"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-groupBy">Map.groupBy</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = Map.groupBy(new Set([1, 2, 3, 4]), it =&gt; it % 2)
+return map.size === 2
+  &amp;&amp; map.get(0)[0] === 2
+  &amp;&amp; map.get(0)[1] === 4
+  &amp;&amp; map.get(1)[0] === 1
+  &amp;&amp; map.get(1)[1] === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;groupBy&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-keyBy"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-keyBy">Map.keyBy</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it =&gt; it.id)
+return map.size === 2
+  &amp;&amp; map.get(101).id === 101
+  &amp;&amp; map.get(102).id === 102;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;keyBy&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-filter"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-filter">Map.prototype.filter</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = new Map([[1, 4], [2, 5], [3, 6]]).filter(it =&gt; !(it % 2));
+return map.size === 2
+  &amp;&amp; map.get(1) === 4
+  &amp;&amp; map.get(3) === 6;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;filter&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-mapKeys"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-mapKeys">Map.prototype.mapKeys</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = new Map([[1, 4], [2, 5], [3, 6]]).mapKeys((value, key) =&gt; key * key);
+return map.size === 3
+  &amp;&amp; map.get(1) === 4
+  &amp;&amp; map.get(4) === 5
+  &amp;&amp; map.get(9) === 6;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;mapKeys&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-mapValues"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-mapValues">Map.prototype.mapValues</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) =&gt; value * value);
+return map.size === 3
+  &amp;&amp; map.get(1) === 16
+  &amp;&amp; map.get(2) === 25
+  &amp;&amp; map.get(3) === 36;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;mapValues&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-merge"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-merge">Map.prototype.merge</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));
+return map.size === 3
+  &amp;&amp; map.get(1) === 4
+  &amp;&amp; map.get(2) === 7
+  &amp;&amp; map.get(3) === 6;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;merge&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-addAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-addAll">Set.prototype.addAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2]).addAll(2, 3);
+return set.size === 3
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(2)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;addAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-deleteAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-deleteAll">Set.prototype.deleteAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3, 4]);
+return set.deleteAll(2, 3) === true
+  &amp;&amp; set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(4);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;deleteAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-every"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-every">Set.prototype.every</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).every(it =&gt; typeof it === 'number');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;every&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-filter"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-filter">Set.prototype.filter</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).filter(it =&gt; it % 2);
+return set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;filter&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-find"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-find">Set.prototype.find</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).find(it =&gt; !(it % 2)) === 2;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;find&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-join"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-join">Set.prototype.join</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).join('|') === '1|2|3';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;join&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-map"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-map">Set.prototype.map</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).map(it =&gt; it * it);
+return set.size === 3
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(4)
+  &amp;&amp; set.has(9);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;map&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-reduce"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-reduce">Set.prototype.reduce</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).reduce((memo, it) =&gt; memo + it) === 6;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;reduce&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-some"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Set-prototype-some">Set.prototype.some</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).some(it =&gt; it % 2);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;some&#x27;">Error</div></td>
         </tr>
       </table>
       <table class="results">
