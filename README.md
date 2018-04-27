@@ -13,6 +13,16 @@ latest set of <s>ES6</s> ES2015, ES2016 and ES2017 tests from the [compat-table]
 them against [several versions](https://github.com/williamkapke/node-compat-table/blob/gh-pages/v8.versions) of node PLUS
 [the nightly build](https://nodejs.org/download/nightly/). The results are committed/published here.
 
+## CLI or programmatic using
+
+There is a Node.js module which you can programmatically check the compatibility.
+Also, there is a CLI program done this work.
+
+For details, you can check out the two repositories below:
+
+- [node-green](https://github.com/g-plane/node-green) - Check Node.js ECMAScript compatibility programmatically.
+- [node-green-cli](https://github.com/g-plane/node-green-cli) - CLI program for checking Node.js ECMAScript compatibility.
+
 ## Making change to the webpage
 The webpage is hosted via GitHub.
 
