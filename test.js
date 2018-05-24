@@ -75,12 +75,10 @@ function run (script, cb) {
   var async = /asyncTestPassed/.test(script)
   if (async) {
     runAsync(script, function (result) {
-      if (!result || typeof result === 'string') return runAsync(strict(script), cb)
       return cb(result)
     })
   } else {
     var result = runSync(script)
-    if (!result || typeof result === 'string') result = runSync(strict(script))
     return cb(result)
   }
 }
@@ -117,10 +115,6 @@ function runSync (script) {
   } catch (e) {
     return e.message
   }
-}
-
-function strict (script) {
-  return '"use strict"\n' + script
 }
 
 function write () {
