@@ -84,6 +84,13 @@ function run (script, cb) {
 }
 
 function runAsync (script, cb) {
+  var silencer = error => console.log('test had an unhandled rejected promise');
+  process.addListener('unhandledRejection', silencer);
+  function done(result) {
+    process.removeListener('unhandledRejection', silencer);
+    cb(result);
+  }
+
   /* eslint-disable no-new-func */
   var timer = null
 
@@ -93,17 +100,17 @@ function runAsync (script, cb) {
     fn(function () {
       clearTimeout(timer)
       process.nextTick(function () {
-        cb(true)
+        done(true)
       })
     })
 
     timer = setTimeout(function () {
-      cb(false)
+      done(false)
     }, 5000)
   } catch (e) {
     clearTimeout(timer)
     process.nextTick(function () {
-      cb(e.message)
+      done(e.message)
     })
   }
 }
