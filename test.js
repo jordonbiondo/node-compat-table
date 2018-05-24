@@ -10,6 +10,9 @@ if (esStaging) version += '--es_staging'
 var harmony = /--harmony/.test(process.execArgv) ? '--harmony' : ''
 if (harmony) version += '--harmony'
 
+var silencer = error => console.log('test had an unhandled rejected promise');
+process.addListener('unhandledRejection', silencer);
+
 console.log('Testing ' + version)
 
 // This function is needed to run the tests and was extracted from:
@@ -84,12 +87,6 @@ function run (script, cb) {
 }
 
 function runAsync (script, cb) {
-  var silencer = error => console.log('test had an unhandled rejected promise');
-  process.addListener('unhandledRejection', silencer);
-  function done(result) {
-    process.removeListener('unhandledRejection', silencer);
-    cb(result);
-  }
 
   /* eslint-disable no-new-func */
   var timer = null
@@ -100,17 +97,17 @@ function runAsync (script, cb) {
     fn(function () {
       clearTimeout(timer)
       process.nextTick(function () {
-        done(true)
+        cb(true)
       })
     })
 
     timer = setTimeout(function () {
-      done(false)
+      cb(false)
     }, 5000)
   } catch (e) {
     clearTimeout(timer)
     process.nextTick(function () {
-      done(e.message)
+      cb(e.message)
     })
   }
 }
