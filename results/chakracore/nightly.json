@@ -1,5 +1,5 @@
 {
-  "_version": "11.0.0-nightly20180524d3aa84953d",
+  "_version": "11.0.0-nightly20180525187e28eeb6",
   "_engine": "chakracore 1.9.1.0",
   "ESNEXT": {
     "_successful": 6,
@@ -323,9 +323,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 677,
+    "_successful": 676,
     "_count": 682,
-    "_percent": 0.9926686217008798,
+    "_percent": 0.9912023460410557,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Out of stack space",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Out of stack space",
     "syntax›default function parameters›basic functionality": true,
@@ -1007,6 +1007,6 @@
     "annex b›RegExp syntax extensions›incomplete patterns and quantifiers": true,
     "annex b›RegExp syntax extensions›octal escape sequences": true,
     "annex b›RegExp syntax extensions›invalid backreferences become octal escapes": true,
-    "annex b›HTML-style comments": true
+    "annex b›HTML-style comments": "Syntax error"
   }
 }
