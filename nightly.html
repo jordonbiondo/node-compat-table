@@ -13649,25 +13649,6 @@ function check() {
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2018-features--template-literal-revision"></div><a href="#ES2018-features--template-literal-revision">template literal revision</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function tag(strings, a) {
-return strings[0] === void 0 &amp;&amp;
-strings.raw[0] === &quot;\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}&quot; &amp;&amp;
-strings[1] === &quot;\0&quot; &amp;&amp;
-strings.raw[1] === &quot;\\0&quot; &amp;&amp;
-a === 0;
-}
-return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Error" title="Octal numeric literals and escape characters not allowed in strict mode">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
             <div class="hash" id="ES2018-features--s--dotAll--flag-for-regular-expressions"></div><a href="#ES2018-features--s--dotAll--flag-for-regular-expressions">s (dotAll) flag for regular expressions</a>
             <div class="info">?
               <div class="fn">function(){
@@ -13778,6 +13759,39 @@ asyncIterable[Symbol.asyncIterator] = function(){
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
+      </table>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div class="hash" id="ES2018-misc"></div><a href="#ES2018-misc">misc</a>
+          </h2>
+        </caption>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2018-misc-"></div><a href="#ES2018-misc-"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2018-misc--template-literal-revision"></div><a href="#ES2018-misc--template-literal-revision">template literal revision</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function tag(strings, a) {
+return strings[0] === void 0 &amp;&amp;
+strings.raw[0] === &quot;\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}&quot; &amp;&amp;
+strings[1] === &quot;\0&quot; &amp;&amp;
+strings.raw[1] === &quot;\\0&quot; &amp;&amp;
+a === 0;
+}
+return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Octal numeric literals and escape characters not allowed in strict mode">Error</div></td>
         </tr>
       </table>
     </article>
@@ -13941,16 +13955,15 @@ return a === '1a2b'
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---numeric-separators"></div><a href="#ESNEXT-candidate--stage-3---numeric-separators">numeric separators</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3---Symbol-prototype-description"></div><a href="#ESNEXT-candidate--stage-3---Symbol-prototype-description">Symbol.prototype.description</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
-  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
+                <div class="code">return Symbol('foo').description === 'foo';</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14004,6 +14017,46 @@ return new C(42).x() === 42;</div>}
   #x = 42;
   x(){
     return this.#x;
+  }
+}
+return new C().x() === 42;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-candidate--stage-3--static-class-fields"></div><a href="#ESNEXT-candidate--stage-3--static-class-fields">static class fields</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--static-class-fields-public-static-class-fields"></div><a href="#ESNEXT-candidate--stage-3--static-class-fields-public-static-class-fields">public static class fields</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  static x = 'x';
+}
+return C.x === 'x';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--static-class-fields-private-static-class-fields"></div><a href="#ESNEXT-candidate--stage-3--static-class-fields-private-static-class-fields">private static class fields</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C {
+  static #x = 42;
+  x(){
+    return C.#x;
   }
 }
 return new C().x() === 42;</div>}
@@ -14115,25 +14168,25 @@ return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === s
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap-">Array.prototype.{flatten, flatMap}</a>
+              <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap-">Array.prototype.{flat, flatMap}</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatten">Array.prototype.flatten</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flat"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flat">Array.prototype.flat</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">return [1, [2, 3], [4, [5, 6]]].flatten().join('') === '12345,6';</div>}
+                <div class="code">return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error" title="[1,[2,3],[4,[5,6]]].flatten is not a function">Error</div></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatten&#x27;">Error</div></td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flat&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flatten--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
@@ -14142,76 +14195,8 @@ return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === s
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error" title="[{(intermediate value)(intermediate value)},{(intermediate value)(intermediate value)}].flatMap is not a function">Error</div></td>
+          <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatMap&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding">optional catch binding</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding-basic"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-basic">basic</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">try {
-  throw new Error();
-}
-catch {
-  return true;
-}
-return false;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
-          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding-await"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-await">await</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">(async function (){
-  try {
-    await Promise.reject();
-  }
-  catch {
-    asyncTestPassed();
-  }
-})();</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
-          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--optional-catch-binding-yield"></div><a href="#ESNEXT-candidate--stage-3--optional-catch-binding-yield">yield</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">function *foo() {
-  try {
-    yield;
-    throw new Error();
-  }
-  catch {
-    return true;
-  }
-}
-
-var it = foo();
-it.next();
-return it.next().value;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error" title="Unexpected token {">Error</div></td>
-          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14356,6 +14341,21 @@ return result === 'tromple';</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2---Realms"></div><a href="#ESNEXT-draft--stage-2---Realms">Realms</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return typeof Realm === &quot;function&quot;
+  &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
+    return key in Realm.prototype;
+  });</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ESNEXT-draft--stage-2---weak-references"></div><a href="#ESNEXT-draft--stage-2---weak-references">weak references</a>
             <div class="info">?
               <div class="fn">function(){
@@ -14372,15 +14372,29 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2---Symbol-prototype-description"></div><a href="#ESNEXT-draft--stage-2---Symbol-prototype-description">Symbol.prototype.description</a>
+            <div class="hash" id="ESNEXT-draft--stage-2---numeric-separators"></div><a href="#ESNEXT-draft--stage-2---numeric-separators">numeric separators</a>
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">return Symbol('foo').description === 'foo';</div>}
+                <div class="code">return 1_000_000.000_001 === 1000000.000001 &amp;&amp;
+  0b1010_0001_1000_0101 === 0b1010000110000101;</div>}
               </div>
             </div>
           </td>
           <td class="result"></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2---Object-fromEntries"></div><a href="#ESNEXT-draft--stage-2---Object-fromEntries">Object.fromEntries</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14407,46 +14421,6 @@ return Object.getOwnPropertyDescriptor(A.prototype, &quot;B&quot;).configurable 
             </div>
           </td>
           <td class="result"><div class="Error" title="Invalid or unexpected token">Error</div></td>
-          <td class="result"><div class="Error" title="Invalid character">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-draft--stage-2--static-class-fields"></div><a href="#ESNEXT-draft--stage-2--static-class-fields">static class fields</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--static-class-fields-public-static-class-fields"></div><a href="#ESNEXT-draft--stage-2--static-class-fields-public-static-class-fields">public static class fields</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  static x = 'x';
-}
-return C.x === 'x';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Expected &#x27;(&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2--static-class-fields-private-static-class-fields"></div><a href="#ESNEXT-draft--stage-2--static-class-fields-private-static-class-fields">private static class fields</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">class C {
-  static #x = 42;
-  x(){
-    return C.#x;
-  }
-}
-return new C().x() === 42;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
         </tr>
         <tr>
@@ -14530,6 +14504,74 @@ try {
           <td class="result"><div class="Error" title="Unexpected token throw">Error</div></td>
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
         </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-draft--stage-2--Set-methods"></div><a href="#ESNEXT-draft--stage-2--Set-methods">Set methods</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-intersection"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-intersection">Set.prototype.intersection</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).intersection(new Set([2, 3, 4]));
+return set.size === 2
+  &amp;&amp; set.has(2)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;intersection&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-union"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-union">Set.prototype.union</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2]).union(new Set([2, 3]));
+return set.size === 3
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(2)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;union&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-difference"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-difference">Set.prototype.difference</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2, 3]).difference(new Set([3, 4]));
+return set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(2);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;difference&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-symmetricDifference"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-symmetricDifference">Set.prototype.symmetricDifference</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));
+return set.size === 2
+  &amp;&amp; set.has(1)
+  &amp;&amp; set.has(3);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;symmetricDifference&#x27;">Error</div></td>
+        </tr>
       </table>
       <table class="results">
         <caption>
@@ -14558,21 +14600,6 @@ try {
           </td>
           <td class="result"><div class="Error" title="Unexpected token do">Error</div></td>
           <td class="result"><div class="Error" title="Syntax error">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---Realms"></div><a href="#ESNEXT-proposal--stage-1---Realms">Realms</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return typeof Realm === &quot;function&quot;
-  &amp;&amp; [&quot;eval&quot;, &quot;global&quot;, &quot;intrinsics&quot;, &quot;stdlib&quot;, &quot;directEval&quot;, &quot;indirectEval&quot;, &quot;initGlobal&quot;, &quot;nonEval&quot;].every(function(key){
-    return key in Realm.prototype;
-  });</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -14686,19 +14713,6 @@ return results.length === 3
           </td>
           <td class="result"><div class="Error" title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;codePoints&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---Object-fromEntries"></div><a href="#ESNEXT-proposal--stage-1---Object-fromEntries">Object.fromEntries</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
-return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -16357,74 +16371,6 @@ try {
           </td>
           <td class="result"></td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods"></div><a href="#ESNEXT-proposal--stage-1--Set-methods">Set methods</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-intersect"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-intersect">Set.prototype.intersect</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var set = new Set([1, 2, 3]).intersect(new Set([2, 3, 4]));
-return set.size === 2
-  &amp;&amp; set.has(2)
-  &amp;&amp; set.has(3);</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;intersect&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-union"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-union">Set.prototype.union</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var set = new Set([1, 2]).union(new Set([2, 3]));
-return set.size === 3
-  &amp;&amp; set.has(1)
-  &amp;&amp; set.has(2)
-  &amp;&amp; set.has(3);</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;union&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-except"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-except">Set.prototype.except</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var set = new Set([1, 2, 3]).except(new Set([3, 4]));
-return set.size === 2
-  &amp;&amp; set.has(1)
-  &amp;&amp; set.has(2);</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;except&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1--Set-methods-Set-prototype-xor"></div><a href="#ESNEXT-proposal--stage-1--Set-methods-Set-prototype-xor">Set.prototype.xor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var set = new Set([1, 2]).xor(new Set([2, 3]));
-return set.size === 2
-  &amp;&amp; set.has(1)
-  &amp;&amp; set.has(3);</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;xor&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
