@@ -320,9 +320,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 678,
+    "_successful": 679,
     "_count": 682,
-    "_percent": 0.9941348973607038,
+    "_percent": 0.9956011730205279,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": true,
@@ -900,7 +900,7 @@
     "misc›Proxy, internal 'get' calls›Error.prototype.toString": true,
     "misc›Proxy, internal 'get' calls›String.raw": true,
     "misc›Proxy, internal 'get' calls›RegExp constructor": true,
-    "misc›Proxy, internal 'get' calls›RegExp.prototype.flags": false,
+    "misc›Proxy, internal 'get' calls›RegExp.prototype.flags": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype.test": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype.toString": true,
     "misc›Proxy, internal 'get' calls›RegExp.prototype[Symbol.match]": true,

@@ -18709,19 +18709,31 @@ return get[0] === Symbol.match &amp;&amp; get.slice(1) + '' === &quot;constructo
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">// RegExp.prototype.flags -&gt; Get -&gt; [[Get]]
-var get = [];
-var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+var expected = [];
+// Sorted alphabetically by shortname – &quot;gumsuy&quot;.
+if ('global' in RegExp.prototype) expected.push('global');
+if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
+if ('multiline' in RegExp.prototype) expected.push('multiline');
+if ('dotAll' in RegExp.prototype) expected.push('dotAll');
+if ('unicode' in RegExp.prototype) expected.push('unicode');
+if ('sticky' in RegExp.prototype) expected.push('sticky');
+var actual = [];
+var p = new Proxy({}, { get: function(o, k) { actual.push(k); return o[k]; }});
 Object.getOwnPropertyDescriptor(RegExp.prototype, 'flags').get.call(p);
-return get + '' === &quot;global,ignoreCase,multiline,unicode,sticky&quot;;</div>}
+if (expected.length !== actual.length) return false;
+for (var i = 0; i &lt; expected.length; i++) {
+  if (expected[i] !== actual[i]) return false;
+}
+return true;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
