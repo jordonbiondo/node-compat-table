@@ -13983,6 +13983,19 @@ return a === '1a2b'
           <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3---Object-fromEntries"></div><a href="#ESNEXT-candidate--stage-3---Object-fromEntries">Object.fromEntries</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-candidate--stage-3--instance-class-fields"></div><a href="#ESNEXT-candidate--stage-3--instance-class-fields">instance class fields</a>
@@ -14399,19 +14412,6 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-draft--stage-2---Object-fromEntries"></div><a href="#ESNEXT-draft--stage-2---Object-fromEntries">Object.fromEntries</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
-return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
