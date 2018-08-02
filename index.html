@@ -38,8 +38,14 @@
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub>
               </th>
-              <th class="version v10">10.7.0
+              <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.8.0</td>
+                      <td>v8 6.7.288.49-node.19</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.7.0</td>
@@ -1565,13 +1571,13 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
         <tr>
           <td class="feature sub" colspan="16">
             <h3>
-              <div class="hash" id="ES2015-syntax-spread-------operator"></div><a href="#ES2015-syntax-spread-------operator">spread (...) operator</a>
+              <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects">spread syntax for iterable objects</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-arrays--in-function-calls"></div><a href="#ES2015-syntax-spread-------operator-with-arrays--in-function-calls">with arrays, in function calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-arrays--in-function-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-arrays--in-function-calls">with arrays, in function calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return Math.max(...[1, 2, 3]) === 3</div>}
@@ -1591,12 +1597,12 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-arrays--in-array-literals"></div><a href="#ES2015-syntax-spread-------operator-with-arrays--in-array-literals">with arrays, in array literals</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-arrays--in-array-literals"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-arrays--in-array-literals">with arrays, in array literals</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [...[1, 2, 3]][2] === 3;</div>}
@@ -1616,12 +1622,12 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-sparse-arrays--in-function-calls"></div><a href="#ES2015-syntax-spread-------operator-with-sparse-arrays--in-function-calls">with sparse arrays, in function calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-sparse-arrays--in-function-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-sparse-arrays--in-function-calls">with sparse arrays, in function calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var a = Array(...[,,]);
@@ -1642,12 +1648,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-sparse-arrays--in-array-literals"></div><a href="#ES2015-syntax-spread-------operator-with-sparse-arrays--in-array-literals">with sparse arrays, in array literals</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-sparse-arrays--in-array-literals"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-sparse-arrays--in-array-literals">with sparse arrays, in array literals</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var a = [...[,,]];
@@ -1668,12 +1674,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-strings--in-function-calls"></div><a href="#ES2015-syntax-spread-------operator-with-strings--in-function-calls">with strings, in function calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-strings--in-function-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-strings--in-function-calls">with strings, in function calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return Math.max(...&quot;1234&quot;) === 4;</div>}
@@ -1693,12 +1699,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-strings--in-array-literals"></div><a href="#ES2015-syntax-spread-------operator-with-strings--in-array-literals">with strings, in array literals</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-strings--in-array-literals"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-strings--in-array-literals">with strings, in array literals</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [&quot;a&quot;, ...&quot;bcd&quot;, &quot;e&quot;][3] === &quot;d&quot;;</div>}
@@ -1718,12 +1724,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-astral-plane-strings--in-function-calls"></div><a href="#ES2015-syntax-spread-------operator-with-astral-plane-strings--in-function-calls">with astral plane strings, in function calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-astral-plane-strings--in-function-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-astral-plane-strings--in-function-calls">with astral plane strings, in function calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return Array(...&quot;𠮷𠮶&quot;)[0] === &quot;𠮷&quot;;</div>}
@@ -1743,12 +1749,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-astral-plane-strings--in-array-literals"></div><a href="#ES2015-syntax-spread-------operator-with-astral-plane-strings--in-array-literals">with astral plane strings, in array literals</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-astral-plane-strings--in-array-literals"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-astral-plane-strings--in-array-literals">with astral plane strings, in array literals</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [...&quot;𠮷𠮶&quot;][0] === &quot;𠮷&quot;;</div>}
@@ -1768,12 +1774,12 @@ return &quot;0&quot; in a &amp;&amp; &quot;1&quot; in a &amp;&amp; '' + a[0] + a
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-generator-instances--in-calls"></div><a href="#ES2015-syntax-spread-------operator-with-generator-instances--in-calls">with generator instances, in calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-generator-instances--in-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-generator-instances--in-calls">with generator instances, in calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = (function*(){ yield 1; yield 2; yield 3; }());
@@ -1794,12 +1800,12 @@ return Math.max(...iterable) === 3;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-generator-instances--in-arrays"></div><a href="#ES2015-syntax-spread-------operator-with-generator-instances--in-arrays">with generator instances, in arrays</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-generator-instances--in-arrays"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-generator-instances--in-arrays">with generator instances, in arrays</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = (function*(){ yield &quot;b&quot;; yield &quot;c&quot;; yield &quot;d&quot;; }());
@@ -1820,12 +1826,12 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-generic-iterables--in-calls"></div><a href="#ES2015-syntax-spread-------operator-with-generic-iterables--in-calls">with generic iterables, in calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-generic-iterables--in-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-generic-iterables--in-calls">with generic iterables, in calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = global.__createIterableObject([1, 2, 3]);
@@ -1846,12 +1852,12 @@ return Math.max(...iterable) === 3;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-generic-iterables--in-arrays"></div><a href="#ES2015-syntax-spread-------operator-with-generic-iterables--in-arrays">with generic iterables, in arrays</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-generic-iterables--in-arrays"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-generic-iterables--in-arrays">with generic iterables, in arrays</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = global.__createIterableObject([&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]);
@@ -1872,12 +1878,12 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-instances-of-iterables--in-calls"></div><a href="#ES2015-syntax-spread-------operator-with-instances-of-iterables--in-calls">with instances of iterables, in calls</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-instances-of-iterables--in-calls"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-instances-of-iterables--in-calls">with instances of iterables, in calls</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = global.__createIterableObject([1, 2, 3]);
@@ -1898,12 +1904,12 @@ return Math.max(...Object.create(iterable)) === 3;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-with-instances-of-iterables--in-arrays"></div><a href="#ES2015-syntax-spread-------operator-with-instances-of-iterables--in-arrays">with instances of iterables, in arrays</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-with-instances-of-iterables--in-arrays"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-with-instances-of-iterables--in-arrays">with instances of iterables, in arrays</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var iterable = global.__createIterableObject([&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]);
@@ -1924,12 +1930,12 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ES2015-syntax-spread-------operator-spreading-non-iterables-is-a-runtime-error"></div><a href="#ES2015-syntax-spread-------operator-spreading-non-iterables-is-a-runtime-error">spreading non-iterables is a runtime error</a>
+            <div class="hash" id="ES2015-syntax-spread-syntax-for-iterable-objects-spreading-non-iterables-is-a-runtime-error"></div><a href="#ES2015-syntax-spread-syntax-for-iterable-objects-spreading-non-iterables-is-a-runtime-error">spreading non-iterables is a runtime error</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">try {
@@ -1953,8 +1959,8 @@ return [&quot;a&quot;, ...Object.create(iterable), &quot;e&quot;][3] === &quot;d
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="16">
@@ -21995,8 +22001,14 @@ return a === 3;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.7.0
+              <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.8.0</td>
+                      <td>v8 6.7.288.49-node.19</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.7.0</td>
@@ -23530,8 +23542,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.7.0
+              <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.8.0</td>
+                      <td>v8 6.7.288.49-node.19</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.7.0</td>
@@ -26564,8 +26582,14 @@ return i === 0;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.7.0
+              <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.8.0</td>
+                      <td>v8 6.7.288.49-node.19</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.7.0</td>
@@ -28116,8 +28140,14 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">16% complete</sub><sub class="unflagged">13% complete</sub>
               </th>
-              <th class="version v10">10.7.0
+              <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.8.0</td>
+                      <td>v8 6.7.288.49-node.19</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.7.0</td>
