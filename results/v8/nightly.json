@@ -1,6 +1,6 @@
 {
-  "_version": "11.0.0-nightly2018091490c93682d1",
-  "_engine": "v8 6.9.427.22-node.10",
+  "_version": "11.0.0-nightly20180915de37ba34c5",
+  "_engine": "v8 6.9.427.22-node.11",
   "ESNEXT": {
     "_successful": 22,
     "_count": 152,
