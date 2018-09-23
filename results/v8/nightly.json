@@ -1,10 +1,10 @@
 {
-  "_version": "11.0.0-nightly201809222b29df71eb",
-  "_engine": "v8 6.9.427.23-node.12",
+  "_version": "11.0.0-nightly201809238aca934009",
+  "_engine": "v8 7.0.276.20-node.2",
   "ESNEXT": {
-    "_successful": 22,
+    "_successful": 23,
     "_count": 152,
-    "_percent": 0.14473684210526316,
+    "_percent": 0.1513157894736842,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": true,
@@ -26,7 +26,7 @@
     "candidate (stage 3)›Function.prototype.toString revision›methods and computed property names": true,
     "candidate (stage 3)›Array.prototype.{flat, flatMap}›Array.prototype.flat": true,
     "candidate (stage 3)›Array.prototype.{flat, flatMap}›Array.prototype.flatMap": true,
-    "candidate (stage 3)›Symbol.prototype.description": false,
+    "candidate (stage 3)›Symbol.prototype.description": true,
     "candidate (stage 3)›BigInt›basic functionality": true,
     "candidate (stage 3)›BigInt›constructor": true,
     "candidate (stage 3)›BigInt›BigInt.asUintN": true,
