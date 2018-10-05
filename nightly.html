@@ -13904,41 +13904,40 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--global"></div><a href="#ESNEXT-candidate--stage-3--global">global</a>
+              <div class="hash" id="ESNEXT-candidate--stage-3--globalThis"></div><a href="#ESNEXT-candidate--stage-3--globalThis">globalThis</a>
             </h3>
           </td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--global--global--global-property-is-global-object"></div><a href="#ESNEXT-candidate--stage-3--global--global--global-property-is-global-object">&quot;global&quot; global property is global object</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--globalThis--globalThis--global-property-is-global-object"></div><a href="#ESNEXT-candidate--stage-3--globalThis--globalThis--global-property-is-global-object">&quot;globalThis&quot; global property is global object</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var actualGlobal = Function('return this')();
 actualGlobal.__system_global_test__ = 42;
-return typeof global === 'object' &amp;&amp; global &amp;&amp; global === actualGlobal &amp;&amp; !global.lacksGlobal &amp;&amp; global.__system_global_test__ === 42;</div>}
+return typeof globalThis === 'object' &amp;&amp; globalThis &amp;&amp; globalThis === actualGlobal &amp;&amp; !globalThis.lacksGlobalThis &amp;&amp; globalThis.__system_global_test__ === 42;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"></td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--global--global--global-property-has-correct-property-descriptor"></div><a href="#ESNEXT-candidate--stage-3--global--global--global-property-has-correct-property-descriptor">&quot;global&quot; global property has correct property descriptor</a>
+            <div class="hash" id="ESNEXT-candidate--stage-3--globalThis--globalThis--global-property-has-correct-property-descriptor"></div><a href="#ESNEXT-candidate--stage-3--globalThis--globalThis--global-property-has-correct-property-descriptor">&quot;globalThis&quot; global property has correct property descriptor</a>
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var actualGlobal = Function('return this')();
-if (typeof global !== 'object') { return false; }
-if (!('global' in actualGlobal)) { return false; }
-if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'global')) { return false; }
-if (typeof Object.getOwnPropertyDescriptor !== 'function') { return true; } // ES3
+if (typeof globalThis !== 'object') { return false; }
+if (!('globalThis' in actualGlobal)) { return false; }
+if (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }
 
-var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'global');
+var descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');
 return descriptor.value === actualGlobal &amp;&amp; !descriptor.enumerable &amp;&amp; descriptor.configurable &amp;&amp; descriptor.writable;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
+          <td class="result"></td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
