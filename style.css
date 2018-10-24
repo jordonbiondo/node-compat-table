@@ -153,6 +153,9 @@ article > header > h1 a:hover {
   width: 480px;
   min-width: 480px;
 }
+.hidden-version {
+  display: none;
+}
 .result,.version {
   color: white;
   text-align: center;

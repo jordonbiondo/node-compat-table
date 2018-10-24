@@ -13,6 +13,15 @@ html
       ga('send', 'pageview');
 
     link(rel="stylesheet", href="style.css")
+    script.
+      function toggleVisibility(arg) {
+        window.foobar = arg;
+        var elements = document.getElementsByClassName('result-for-' + arg.getAttribute('data-version').replace(/\./g, '-'));
+        for (var i = 0; i < elements.length; i++) {
+          var element = elements[i];
+          element.classList.toggle('hidden-version');
+        }
+      };
 body
   if (flaggable)
     input#flagged(type='checkbox', checked='checked')
@@ -22,6 +31,9 @@ body
   #credits
     | Created by&nbsp;
     a(href='https://github.com/williamkapke', target="_blank") William Kapke
+  each details, nodeVersion in headers
+    input(type='checkbox', checked='checked' id='visible-' + nodeVersion, data-version=nodeVersion, onChange='toggleVisibility(this)')
+    label(for='visible-' + nodeVersion) #{nodeVersion}
 
   header.global
     a#node-compat-logo(href='./')
@@ -40,7 +52,7 @@ body
       table.headings
         tr
           each details, nodeVersion in headers
-            th.version(class='v' + details.version.split('.')[0])=details.version
+                  th.version(class='v' + details.version.split('.')[0] + ' result-for-' + nodeVersion.replace(/\./g, '-'))=details.version
               .details
                 small (these versions have identical results)
                 each detail in details.includes
@@ -85,7 +97,7 @@ body
                         | }
                 each nodeVersion in Object.keys(headers)
                   - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
-                  td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}
+                  td.result(class=classes + ' result-for-' + nodeVersion.replace(/\./g, '-')) !{results(nodeVersion, esVersion, obj3.path)}
 
 
   +article('ES2015')
